@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">DuAn</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="password">     Mật khẩu</string>
+    <string name="Email">     Email</string>
+    <string name="dangki">Đăng kí</string>
+    <string name="chaphanh">đồng ý với điều khoản cộng đồng</string>
+    <string name="dangnhap">Đăng nhập</string>
+    <string name="chuaccotk">Đăng Kí</string>
+    <string name="benhvien">Tìm Bệnh Viện</string>
+    <string name="thuoc">thuốc</string>
+    <string name="congdong">Cộng Đồng</string>
+    <string name="socuu">Sơ Cứu</string>
+    <string name="timbenhvien">Tìm bệnh viện</string>
+    <string name="timkqh">tìm theo quận/huyện</string>
+    <string name="timttinh">tìm theo tỉnh</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="sett_reminder_header">nhắc nhở</string>
+    <string name="sett_reminder_label">nhac lai</string>
+    <string name="sett_reminder_desc">nhắc thuc hiện kế hoạch</string>
+    <string name="sett_reminder_time_label">Set Reminder Time</string>
+    <string name="sett_reminder_time_content">8 : 00 PM</string>
+</resources>
