@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,8 +7,8 @@
     tools:context=".ScollDrug">
 
     <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,27 +20,219 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/img"
+            <TextView
+                android:id="@+id/tvNameDrug"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:contentDescription="@null"
-                android:src="@drawable/hospital_2" />
+                android:paddingLeft="20dp"
+                android:paddingTop="6dp"
+                android:text="ten thuoc"
+                android:background="@drawable/customtv"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_height="55dp" />
+            <LinearLayout
+                android:background="@drawable/customtv"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="55dp">
+                <TextView
+                    android:paddingTop="6dp"
+                    android:paddingLeft="20dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
 
-            <ImageView
-                android:layout_width="500dp"
-                android:layout_height="230dp"
-                android:layout_gravity="center_horizontal"
-                android:contentDescription="@null"
-                android:src="@drawable/a1" />
-            <ImageView
-                android:layout_width="500dp"
-                android:layout_height="230dp"
-                android:layout_gravity="center_horizontal"
-                android:contentDescription="@null"
-                android:src="@drawable/a1" />
+                    android:layout_width="wrap_content"
+                    android:text="@string/giathuoc"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="15dp"
+                    android:textStyle="normal"
+                    android:text="gia"
+                    android:id="@+id/tvGiathuoc"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:background="@drawable/customtv"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:paddingTop="4dp"
+                    android:paddingLeft="20dp"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+
+                    android:layout_width="wrap_content"
+                    android:text="@string/thanhphan"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:paddingTop="4dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="15dp"
+                    android:textStyle="normal"
+                    android:text="thanh phan"
+                    android:paddingRight="4dp"
+                    android:id="@+id/tvThanhphan"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:background="@drawable/customtv"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="55dp">
+                <TextView
+                    android:paddingTop="4dp"
+                    android:paddingLeft="20dp"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+
+                    android:layout_width="wrap_content"
+                    android:text="@string/chidinh"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:paddingTop="6dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="15dp"
+                    android:textStyle="normal"
+                    android:paddingRight="4dp"
+                    android:text="chi dinh"
+                    android:id="@+id/tvChidinh"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:background="@drawable/customtv"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:paddingTop="4dp"
+                    android:paddingLeft="20dp"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:text="@string/chongchidinh"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:paddingTop="4dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="15dp"
+                    android:textStyle="normal"
+                    android:text="chong cd"
+                    android:id="@+id/tvChongcd"
+                    android:paddingRight="4dp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:background="@drawable/customtv"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:paddingTop="4dp"
+                    android:paddingLeft="20dp"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+
+                    android:layout_width="wrap_content"
+                    android:text="@string/cachdung"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:paddingTop="4dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="15dp"
+                    android:textStyle="normal"
+                    android:id="@+id/tvCachDung"
+                    android:text="cách dung"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:background="@drawable/customtv"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:paddingTop="4dp"
+                    android:paddingLeft="20dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+
+                    android:layout_width="wrap_content"
+                    android:text="@string/tacdungphu"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:paddingTop="4dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="15dp"
+                    android:textStyle="normal"
+                    android:text="tach dung phu"
+                    android:id="@+id/tvTacdungPhu"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:paddingRight="5dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:background="@drawable/customtv"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:paddingTop="4dp"
+                    android:paddingLeft="20dp"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+
+                    android:layout_width="wrap_content"
+                    android:text="@string/chuy"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:paddingTop="4dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="15dp"
+                    android:textStyle="normal"
+                    android:text="chu y"
+                    android:id="@+id/tvChuY"
+                    android:textColor="@color/white"
+                    android:paddingRight="5dp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

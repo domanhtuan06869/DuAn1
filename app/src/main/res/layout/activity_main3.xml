@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CFF7DC"
-    tools:context=".activity_binh_luan">
+    tools:context=".chat.Main3Activity">
 
     <ImageView
-        android:id="@+id/imgChon"
+        android:id="@+id/imgView"
         android:layout_width="wrap_content"
-        android:layout_height="112dp"
+        android:layout_height="200dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -33,56 +32,51 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgChon" />
+        app:layout_constraintTop_toBottomOf="@+id/imgView" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rcchat"
         android:layout_width="match_parent"
-        android:layout_height="277dp"
+        android:layout_height="129dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvmess">
+        app:layout_constraintTop_toBottomOf="@+id/tvmess"
+        app:layout_constraintVertical_bias="0.055">
 
     </android.support.v7.widget.RecyclerView>
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="340dp"
+        android:layout_height="46dp"
         android:layout_marginStart="14dp"
         android:layout_marginLeft="14dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="40dp"
-        android:background="#FFFFFF"
+        android:layout_marginBottom="8dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rcchat">
+        app:layout_constraintStart_toStartOf="parent">
 
         <EditText
             android:id="@+id/edtcmt"
-            android:layout_width="336dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:background="#FFFFFF" />
+            android:background="@color/colorAccent" />
 
-        <ImageView
-            android:id="@+id/imgSend"
-            android:layout_width="20dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/custom_buttom_2"
-            app:srcCompat="@drawable/sent" />
-
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="CMT"
+            android:text="binh luan" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

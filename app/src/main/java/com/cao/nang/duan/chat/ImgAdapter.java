@@ -1,4 +1,4 @@
-package com.cao.nang.duan.adapter;
+package com.cao.nang.duan.chat;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,42 +7,43 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.cao.nang.duan.R;
-import com.cao.nang.duan.model.CategoryDrug;
-import com.cao.nang.duan.ListCategoryDrug;
-import com.cao.nang.duan.model.SickList;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class SickAdapter extends RecyclerView.Adapter<SickAdapter.MyViewHolder> {
+public class ImgAdapter extends RecyclerView.Adapter <ImgAdapter.MyViewHolder> {
     Context context;
-    List<SickList> listdr;
+    List<ImageUploadInfo> listdr;
 
 
-    public SickAdapter(Context c, List<SickList> list) {
+    public ImgAdapter(Context c, List<ImageUploadInfo> list) {
         context = c;
         listdr = list;
     }
 
     @NonNull
     @Override
-    public SickAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return  new SickAdapter.MyViewHolder(LayoutInflater.from(context).inflate(R.layout.itemlistlick,viewGroup,false));
+    public ImgAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        return new ImgAdapter.MyViewHolder(LayoutInflater.from(context).inflate(R.layout.activity_itemview,viewGroup,false));
     }
 
 
 
     @Override
-    public void onBindViewHolder(@NonNull SickAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ImgAdapter.MyViewHolder holder, int position) {
         final int i=position;
-        final SickList sickList=listdr.get(position);
-        holder.nameSick.setText(sickList.getSick_name());
-        holder.setClickListener(new SickAdapter.ItemClickListener() {
+        final ImageUploadInfo imageUploadInfo=listdr.get(position);
+        holder.name.setText(imageUploadInfo.getTitle());
+        Picasso.get().load(imageUploadInfo.getImageURL()).into(holder.imageView);
+
+        holder.setClickListener(new ImgAdapter.ItemClickListener() {
             @Override
             public void onClickItem(int pos) {
-                openDetailActivity(sickList.getTreatment());
+               openDetailActivity(imageUploadInfo.getTitle(),imageUploadInfo.getImageURL());
             }
 
             @Override
@@ -54,14 +55,14 @@ public class SickAdapter extends RecyclerView.Adapter<SickAdapter.MyViewHolder> 
     }
     private void openDetailActivity(String...details)
     {
-      //  Intent i=new Intent(context, ListCategoryDrug.class);
+       Intent i=new Intent(context, Main3Activity.class);
 
-    //    i.putExtra("List_drug",details[0]);
+      i.putExtra("title",details[0]);
 
-        // i.putExtra("DESC_KEY",details[1]);
-        //  i.putExtra("PROP_KEY",details[2]);
+        i.putExtra("img",details[1]);
 
-       // context.startActivity(i);
+
+       context.startActivity(i);
     }
 
     @Override
@@ -70,14 +71,16 @@ public class SickAdapter extends RecyclerView.Adapter<SickAdapter.MyViewHolder> 
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
-        private SickAdapter.ItemClickListener mListener;
-        TextView nameSick;
+        private ImgAdapter.ItemClickListener mListener;
+        TextView name;
+        ImageView imageView;
 
 
         // Button btn;
         public MyViewHolder(View itemView) {
             super(itemView);
-           nameSick=  itemView.findViewById(R.id.tvitemsick);
+            imageView=itemView.findViewById(R.id.imgView);
+            name=itemView.findViewById(R.id.tvmess);
             itemView.setOnClickListener((View.OnClickListener) this);
 
 
@@ -97,7 +100,7 @@ public class SickAdapter extends RecyclerView.Adapter<SickAdapter.MyViewHolder> 
             return true;
         }
 
-        public void setClickListener(SickAdapter.ItemClickListener listener) {
+        public void setClickListener(ImgAdapter.ItemClickListener listener) {
             this.mListener = listener;
         }
 
@@ -112,3 +115,4 @@ public class SickAdapter extends RecyclerView.Adapter<SickAdapter.MyViewHolder> 
         void onLongClickItem(int pos);
     }
 }
+

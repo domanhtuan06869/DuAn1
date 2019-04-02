@@ -21,6 +21,7 @@ import com.cao.nang.duan.dao.FindDAO;
 import com.cao.nang.duan.dao.ListCategoryDAO;
 import com.cao.nang.duan.dao.ListDrugDAO;
 import com.cao.nang.duan.dao.ListListDrugDAO;
+import com.cao.nang.duan.dao.ListSickDAO;
 import com.cao.nang.duan.database.ConnectDB;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -124,6 +125,7 @@ ConnectDB connectDB;
     }
 
     public void Socuu(View view) {
+        this.insetmodulSick();
 
 
     }
@@ -151,5 +153,10 @@ ConnectDB connectDB;
         listDrugDAO.deleteTableDrug();
         listDrugDAO.insertAllDrug(this);
 
+    }
+    public  void insetmodulSick(){
+        ListSickDAO listSickDAO=new ListSickDAO(this);
+        listSickDAO.deletetable();// xoa bang
+        listSickDAO.insertSick(this);// insert bang benh
     }
 }

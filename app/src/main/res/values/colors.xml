@@ -14,5 +14,7 @@
 
     <color name="thumb_inactive">#A5A5A5</color>
     <color name="track_inactive">#66A5A5A5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="green">#17B91E</color>
 
 </resources>

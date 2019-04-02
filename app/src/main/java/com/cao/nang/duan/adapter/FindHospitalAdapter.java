@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.cao.nang.duan.MapsActivity;
 import com.cao.nang.duan.R;
 import com.cao.nang.duan.model.CategoryDrug;
 import com.cao.nang.duan.ListCategoryDrug;
@@ -43,7 +44,7 @@ public class FindHospitalAdapter extends RecyclerView.Adapter<FindHospitalAdapte
         holder.setClickListener(new FindHospitalAdapter.ItemClickListener() {
             @Override
             public void onClickItem(int pos) {
-                //openDetailActivity(categoryDrug.getCategory_drug());
+                openDetailActivity();
             }
 
             @Override
@@ -55,10 +56,9 @@ public class FindHospitalAdapter extends RecyclerView.Adapter<FindHospitalAdapte
     }
     private void openDetailActivity(String...details)
     {
-        Intent i=new Intent(context, ListCategoryDrug.class);
+        Intent i=new Intent(context, MapsActivity.class);
 
-        i.putExtra("List_drug",details[0]);
-
+    //    i.putExtra("List_drug",details[0]);
         // i.putExtra("DESC_KEY",details[1]);
         //  i.putExtra("PROP_KEY",details[2]);
 

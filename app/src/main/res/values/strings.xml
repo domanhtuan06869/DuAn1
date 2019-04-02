@@ -6,8 +6,8 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <string name="password">     Mật khẩu</string>
-    <string name="Email">     Email</string>
+    <string name="password">   Mật khẩu</string>
+    <string name="Email">  Email</string>
     <string name="dangki">Đăng kí</string>
     <string name="chaphanh">đồng ý với điều khoản cộng đồng</string>
     <string name="dangnhap">Đăng nhập</string>
@@ -25,4 +25,11 @@
     <string name="sett_reminder_desc">nhắc thuc hiện kế hoạch</string>
     <string name="sett_reminder_time_label">Set Reminder Time</string>
     <string name="sett_reminder_time_content">8 : 00 PM</string>
+    <string name="giathuoc">Giá thuốc :</string>
+    <string name="thanhphan">Thành phần :</string>
+    <string name="chidinh">chỉ định :</string>
+    <string name="chongchidinh">Chống chỉ định :</string>
+    <string name="cachdung">Cách dùng :</string>
+    <string name="tacdungphu">Tác dụng Phụ :</string>
+    <string name="chuy">Chú ý :</string>
 </resources>

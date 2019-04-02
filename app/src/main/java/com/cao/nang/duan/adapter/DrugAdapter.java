@@ -39,11 +39,13 @@ public class DrugAdapter extends RecyclerView.Adapter<DrugAdapter.MyViewHolder> 
     public void onBindViewHolder(@NonNull DrugAdapter.MyViewHolder holder, int position) {
         final int i=position;
         final Drug drug=listdr.get(position);
-        holder.tvnameDrug.setText("con cac"+drug.getName_drug());
+        holder.tvnameDrug.setText(drug.getName_drug());
         holder.setClickListener(new DrugAdapter.ItemClickListener() {
             @Override
             public void onClickItem(int pos) {
-                openDetailActivity(drug.getName_drug());
+                openDetailActivity(drug.getName_drug(),drug.getPrice_drug(),drug.getIngredient_drug()
+                ,drug.getAssign_drug(),drug.getContraindicated_drug(),drug.getUser_drug(),drug.getSide_efects(),drug.getAttention()
+                );
             }
 
             @Override
@@ -56,12 +58,15 @@ public class DrugAdapter extends RecyclerView.Adapter<DrugAdapter.MyViewHolder> 
     private void openDetailActivity(String...details)
     {
        Intent i=new Intent(context, ScollDrug.class);
-//
-//        i.putExtra("List_drug",details[0]);
-//
-//        // i.putExtra("DESC_KEY",details[1]);
-//        //  i.putExtra("PROP_KEY",details[2]);
-//
+     i.putExtra("Name_Drug",details[0]);
+     i.putExtra("Price",details[1]);
+     i.putExtra("Ingredient",details[2]);
+     i.putExtra("Assign",details[3]);
+     i.putExtra("Contraindicated",details[4]);
+     i.putExtra("User",details[5]);
+     i.putExtra("Effect",details[6]);
+     i.putExtra("Attention",details[7]);
+
     context.startActivity(i);
     }
 

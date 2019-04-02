@@ -1,7 +1,6 @@
-package com.cao.nang.duan.adapter;
+package com.cao.nang.duan.chat;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,39 +9,37 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.cao.nang.duan.R;
-import com.cao.nang.duan.model.CategoryDrug;
-import com.cao.nang.duan.ListCategoryDrug;
-import com.cao.nang.duan.model.SickList;
 
 import java.util.List;
 
-public class SickAdapter extends RecyclerView.Adapter<SickAdapter.MyViewHolder> {
+public class messageAdapter  extends RecyclerView.Adapter <messageAdapter.MyViewHolder> {
     Context context;
-    List<SickList> listdr;
+    List<Tomessage> listdr;
 
 
-    public SickAdapter(Context c, List<SickList> list) {
+    public messageAdapter(Context c, List<Tomessage> list) {
         context = c;
         listdr = list;
     }
 
     @NonNull
     @Override
-    public SickAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return  new SickAdapter.MyViewHolder(LayoutInflater.from(context).inflate(R.layout.itemlistlick,viewGroup,false));
+    public messageAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        return new messageAdapter.MyViewHolder(LayoutInflater.from(context).inflate(R.layout.activity_item_name,viewGroup,false));
     }
 
 
 
     @Override
-    public void onBindViewHolder(@NonNull SickAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull messageAdapter.MyViewHolder holder, int position) {
         final int i=position;
-        final SickList sickList=listdr.get(position);
-        holder.nameSick.setText(sickList.getSick_name());
-        holder.setClickListener(new SickAdapter.ItemClickListener() {
+        final Tomessage imageUploadInfo=listdr.get(position);
+       holder.message.setText("\n"+imageUploadInfo.getMessage());
+
+        holder.setClickListener(new messageAdapter.ItemClickListener() {
             @Override
             public void onClickItem(int pos) {
-                openDetailActivity(sickList.getTreatment());
+                // openDetailActivity(categoryDrug.getCategory_drug());
             }
 
             @Override
@@ -54,14 +51,14 @@ public class SickAdapter extends RecyclerView.Adapter<SickAdapter.MyViewHolder> 
     }
     private void openDetailActivity(String...details)
     {
-      //  Intent i=new Intent(context, ListCategoryDrug.class);
+        // Intent i=new Intent(context, .class);
 
-    //    i.putExtra("List_drug",details[0]);
+        //  i.putExtra("List_drug",details[0]);
 
         // i.putExtra("DESC_KEY",details[1]);
         //  i.putExtra("PROP_KEY",details[2]);
 
-       // context.startActivity(i);
+        // context.startActivity(i);
     }
 
     @Override
@@ -70,14 +67,15 @@ public class SickAdapter extends RecyclerView.Adapter<SickAdapter.MyViewHolder> 
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
-        private SickAdapter.ItemClickListener mListener;
-        TextView nameSick;
+        private messageAdapter.ItemClickListener mListener;
+        TextView message;
+
 
 
         // Button btn;
         public MyViewHolder(View itemView) {
             super(itemView);
-           nameSick=  itemView.findViewById(R.id.tvitemsick);
+            message=itemView.findViewById(R.id.tvmess);
             itemView.setOnClickListener((View.OnClickListener) this);
 
 
@@ -97,7 +95,7 @@ public class SickAdapter extends RecyclerView.Adapter<SickAdapter.MyViewHolder> 
             return true;
         }
 
-        public void setClickListener(SickAdapter.ItemClickListener listener) {
+        public void setClickListener(messageAdapter.ItemClickListener listener) {
             this.mListener = listener;
         }
 
@@ -111,4 +109,5 @@ public class SickAdapter extends RecyclerView.Adapter<SickAdapter.MyViewHolder> 
 
         void onLongClickItem(int pos);
     }
+
 }
