@@ -1,130 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    style="@android:style/Widget.Holo.Light.ScrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:scrollbarStyle="outsideInset"
+    android:background="@drawable/wall"
 
-    <LinearLayout
-        android:id="@+id/llReminder"
-        style="@style/settings_item_layout">
+    >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="9dp"
+        tools:context=".alram.AlarmDrug">
 
         <TextView
-            android:id="@+id/tv_reminder_header"
-            style="@style/settings_header"
-            android:text="@string/sett_reminder_header" />
-
-        <RelativeLayout
+            style="@style/Headings"
+            android:background="@drawable/custom_buttom_3"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/activity_vertical_margin">
-
-            <TextView
-                android:id="@+id/tv_reminder_label"
-                style="@style/settings_sub_header"
-                android:text="@string/sett_reminder_label" />
-
-            <android.support.v7.widget.SwitchCompat
-                android:id="@+id/timerSwitch"
-                android:theme="@style/switch_theme"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="false"
-                android:gravity="center_vertical"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"/>
-
-        </RelativeLayout>
-
-        <TextView
-            android:id="@+id/tv_reminder_desc"
-            style="@style/settings_details"
-            android:paddingTop="@dimen/items_top_padding"
-            android:paddingBottom="@dimen/items_inbetween_space"
-            android:text="@string/sett_reminder_desc" />
+            android:layout_height="0dp"
+            android:textColor="#F30303"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/alarm"
+            android:textSize="27sp" />
 
         <LinearLayout
-            android:id="@+id/ll_set_time"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1.8"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:text="giờ"
+                android:textSize="20dp"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/hours"
+                android:layout_marginLeft="5dp"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:background="@drawable/custom_buttom_3"
+                android:hint="@string/hours"
+                android:nextFocusForward="@+id/minutes"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_marginLeft="100dp"
+                android:layout_width="wrap_content"
+                android:text="phút"
+                android:textSize="20dp"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:layout_marginLeft="5dp"
+                android:id="@+id/minutes"
+                android:background="@drawable/custom_buttom_3"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:hint="@string/minutes"
+                android:nextFocusForward="@+id/vibrate"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/vibrate"
+            style="@style/Headings"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="9dp"
+            android:layout_weight="1"
+            android:text="@string/vibrate"
+
+            />
+
+        <EditText
+            android:id="@+id/label"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="9dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:layout_weight="1.5"
+            android:hint="@string/label"
+            android:imeOptions="actionNext"
+            android:maxLines="1"
+            android:nextFocusForward="@+id/count" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Headings"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:text="@string/count" />
+
+            <Spinner
+                android:id="@+id/count"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
             android:orientation="vertical">
 
-
-            <RelativeLayout
+            <TextView
+                style="@style/Headings"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/items_inbetween_space">
+                android:layout_height="0dp"
+                android:layout_margin="9dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/gap" />
 
-                <TextView
-                    android:id="@+id/tv_reminder_time_label"
-                    style="@style/settings_sub_header"
-                    android:text="@string/sett_reminder_time_label" />
-
-                <ImageView
-                    android:id="@+id/iv_timer"
-                    android:layout_width="@dimen/timer_icon"
-                    android:layout_height="@dimen/timer_icon"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/ic_timer" />
-
-            </RelativeLayout>
-
-
-            <TextView
-                android:id="@+id/tv_reminder_time_desc"
-                style="@style/settings_details"
-                android:paddingTop="@dimen/items_top_padding"
-                android:paddingBottom="@dimen/items_inbetween_space"
-                android:text="@string/sett_reminder_time_content" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <View
-        android:background="@color/textColorSecondary"
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"/>
-
-    <LinearLayout
-        style="@style/settings_item_layout">
-        <TextView
-            android:id="@+id/tv_agree_header"
-            style="@style/settings_header"
-            android:paddingBottom="@dimen/items_inbetween_space"
-            android:text="Agreement" />
-
-        <LinearLayout
-            android:id="@+id/ll_terms"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="@dimen/items_inbetween_space"
-            android:paddingTop="@dimen/items_inbetween_space">
-
-            <TextView
-                android:id="@+id/tv_agree_terms_label"
-                style="@style/settings_sub_header"
-                android:text="Terms &amp; conditions" />
-
+            <SeekBar
+                android:id="@+id/interval"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:max="40"
+                android:progress="5" />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/ll_privacy"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="@dimen/items_inbetween_space"
-            android:paddingTop="@dimen/items_inbetween_space">
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_agree_privacy_label"
-                style="@style/settings_sub_header"
-                android:text="Privacy policy" />
+                style="@style/Headings"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="9dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/vol" />
 
+            <SeekBar
+                android:id="@+id/vol"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:max="40"
+                android:progress="10" />
         </LinearLayout>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:background="@drawable/custom_buttom_3"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1.5"
+            android:onClick="setAlarm"
+            android:text="@string/go" />
     </LinearLayout>
-
-</LinearLayout>
+</ScrollView>

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginGroup">
+    tools:context=".chat.LoginGroup">
 
 
     <ImageView
@@ -27,7 +27,6 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
-        android:paddingLeft="20dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="8dp"
@@ -35,8 +34,9 @@
         android:background="@drawable/customedt"
         android:ems="10"
         android:hint="@string/Email"
-
         android:inputType="textPersonName"
+
+        android:paddingLeft="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,13 +49,13 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="48dp"
-        android:paddingLeft="20dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="@drawable/customedt"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPersonName"
+        android:paddingLeft="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,6 +97,38 @@
         android:text="@string/dangnhap"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtpass" />
+
+    <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="232dp"
+        android:layout_height="235dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:visibility="invisible"
+        app:SpinKit_Color="#2EB933"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmaildg" />
+    <CheckBox
+        android:id="@+id/cbNhomk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="271dp"
+        android:layout_marginRight="271dp"
+        android:layout_marginBottom="8dp"
+        android:text="Nhớ mật khẩu"
+        app:layout_constraintBottom_toTopOf="@+id/btnDangki"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtpass" />
 </android.support.constraint.ConstraintLayout>

@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.cao.nang.duan.ListSick;
 import com.cao.nang.duan.R;
 import com.cao.nang.duan.database.ConnectDB;
 import com.cao.nang.duan.database.Query;

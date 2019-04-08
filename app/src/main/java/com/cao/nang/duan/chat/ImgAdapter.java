@@ -18,17 +18,20 @@ import java.util.List;
 public class ImgAdapter extends RecyclerView.Adapter <ImgAdapter.MyViewHolder> {
     Context context;
     List<ImageUploadInfo> listdr;
+    String email;
 
 
-    public ImgAdapter(Context c, List<ImageUploadInfo> list) {
+
+    public ImgAdapter(Context c, List<ImageUploadInfo> list,String email) {
         context = c;
         listdr = list;
+        this.email=email;
     }
 
     @NonNull
     @Override
     public ImgAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return new ImgAdapter.MyViewHolder(LayoutInflater.from(context).inflate(R.layout.activity_itemview,viewGroup,false));
+        return new ImgAdapter.MyViewHolder(LayoutInflater.from(context).inflate(R.layout.activity_itemviewbantin,viewGroup,false));
     }
 
 
@@ -37,13 +40,17 @@ public class ImgAdapter extends RecyclerView.Adapter <ImgAdapter.MyViewHolder> {
     public void onBindViewHolder(@NonNull ImgAdapter.MyViewHolder holder, int position) {
         final int i=position;
         final ImageUploadInfo imageUploadInfo=listdr.get(position);
-        holder.name.setText(imageUploadInfo.getTitle());
         Picasso.get().load(imageUploadInfo.getImageURL()).into(holder.imageView);
+        holder.title.setText(imageUploadInfo.getTitle());
+        holder.email.setText(imageUploadInfo.getEmail());
+        holder.date.setText(imageUploadInfo.getDate());
+        holder.content.setText(imageUploadInfo.getContent());
 
         holder.setClickListener(new ImgAdapter.ItemClickListener() {
             @Override
             public void onClickItem(int pos) {
-               openDetailActivity(imageUploadInfo.getTitle(),imageUploadInfo.getImageURL());
+                BangTinActyvity bangTinActyvity= new BangTinActyvity();
+               openDetailActivity(imageUploadInfo.getTitle(),imageUploadInfo.getImageURL(),imageUploadInfo.getContent(),email,imageUploadInfo.getDate(),imageUploadInfo.getEmail());
             }
 
             @Override
@@ -55,11 +62,15 @@ public class ImgAdapter extends RecyclerView.Adapter <ImgAdapter.MyViewHolder> {
     }
     private void openDetailActivity(String...details)
     {
-       Intent i=new Intent(context, Main3Activity.class);
+       Intent i=new Intent(context, CommentGroup.class);
 
       i.putExtra("title",details[0]);
 
         i.putExtra("img",details[1]);
+        i.putExtra("content",details[2]);
+        i.putExtra("Email",details[3]);
+        i.putExtra("Date",details[4]);
+        i.putExtra("Emaill",details[5]);
 
 
        context.startActivity(i);
@@ -72,15 +83,17 @@ public class ImgAdapter extends RecyclerView.Adapter <ImgAdapter.MyViewHolder> {
 
     class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
         private ImgAdapter.ItemClickListener mListener;
-        TextView name;
+        TextView title,email,date,content;
         ImageView imageView;
 
 
-        // Button btn;
         public MyViewHolder(View itemView) {
             super(itemView);
             imageView=itemView.findViewById(R.id.imgView);
-            name=itemView.findViewById(R.id.tvmess);
+            title=itemView.findViewById(R.id.tvmess);
+            email=itemView.findViewById(R.id.emallchat);
+            date=itemView.findViewById(R.id.ngaygio);
+            content=itemView.findViewById(R.id.tvcontents);
             itemView.setOnClickListener((View.OnClickListener) this);
 
 

@@ -4,8 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".resgistration">
+    tools:context=".chat.resgistration">
 
+    <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kitres"
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="177dp"
+        android:layout_height="185dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="invisible"
+        app:SpinKit_Color="#2EB933"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPassword2"
+        app:layout_constraintVertical_bias="0.117" />
 
     <ImageView
 
@@ -26,6 +46,7 @@
         android:id="@+id/edtEmail"
         android:background="@drawable/customedt"
         android:paddingLeft="20dp"
+
 
         android:layout_width="match_parent"
         android:layout_height="50dp"

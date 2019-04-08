@@ -136,3 +136,8 @@ public class Main2Activity extends AppCompatActivity {
                 });
     }
 }
+  /*   rcStatus.setHasFixedSize(true);
+        LinearLayoutManager mLayoutManager = new LinearLayoutManager(BangTinActyvity.this);
+        mLayoutManager.setReverseLayout(true);
+        mLayoutManager.setStackFromEnd(true);
+        rcStatus.setLayoutManager(mLayoutManager);*/

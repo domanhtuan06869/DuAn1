@@ -4,45 +4,92 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".chat.MainChat"
+    tools:context=".chat.DangBaiActivity"
     android:layout_margin="20dp">
+    <TextView
+        android:text="@string/taobaiviet"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:textColor="@color/textBlack"
+        android:background="@drawable/custom_buttom_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/nguoidung" />
+        <TextView
+            android:layout_marginTop="20dp"
+            android:paddingLeft="20dp"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:text="email"
+            android:textColor="@color/textBlack"
+            android:id="@+id/emalldangbai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
+    </LinearLayout>
+
+
+
+    <EditText
+        android:id="@+id/title"
+        android:hint="Tiêu đề"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/content"
+        android:hint="Hãy viết gì đó !"
+        android:layout_width="match_parent"
+        android:paddingBottom="100dp"
+        android:layout_height="200dp" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
     <ImageView
         android:id="@+id/select_product_image"
-        android:layout_width="35dp"
-        android:layout_height="20dp"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:cropToPadding="false"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_launcher_foreground"
+        android:src="@drawable/chonhinhanh"
         />
 
-    <Button
+    <TextView
         android:id="@+id/add_new_product"
-        android:layout_width="match_parent"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/product_price"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="45dp"
-        android:padding="17dp"
-        android:text="Add Product"
-        android:textAllCaps="false"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
+        android:paddingLeft="20dp"
+        android:text="@string/share"
+        android:textColor="@color/textBlack"
+        android:textSize="25dp"
+        android:textStyle="bold"
 
         />
-    <EditText
-        android:id="@+id/chat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
-<android.support.v7.widget.RecyclerView
-    android:id="@+id/rclist"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kitdangbai"
 
-</android.support.v7.widget.RecyclerView>
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        app:SpinKit_Color="#2EB933" />
+</LinearLayout>
+
 
 </LinearLayout>

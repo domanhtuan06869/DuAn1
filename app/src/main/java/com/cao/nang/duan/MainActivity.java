@@ -1,30 +1,28 @@
 package com.cao.nang.duan;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 
 import android.view.MenuItem;
-import android.widget.ImageView;
-import android.widget.Toast;
 
+import com.cao.nang.duan.alram.AlarmDrug;
 import com.cao.nang.duan.base.Base;
+import com.cao.nang.duan.chat.LoginGroup;
 import com.cao.nang.duan.dao.FindDAO;
 import com.cao.nang.duan.dao.ListCategoryDAO;
 import com.cao.nang.duan.dao.ListDrugDAO;
 import com.cao.nang.duan.dao.ListListDrugDAO;
 import com.cao.nang.duan.dao.ListSickDAO;
 import com.cao.nang.duan.database.ConnectDB;
+import com.cao.nang.duan.drugandhopistal.ListListDrug;
+import com.cao.nang.duan.drugandhopistal.activity_tim_benh_vien;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends Base
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -158,5 +156,9 @@ ConnectDB connectDB;
         ListSickDAO listSickDAO=new ListSickDAO(this);
         listSickDAO.deletetable();// xoa bang
         listSickDAO.insertSick(this);// insert bang benh
+    }
+
+    public void baothuc(View view) {
+        classintent(AlarmDrug.class);
     }
 }

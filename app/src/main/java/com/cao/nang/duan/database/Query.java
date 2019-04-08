@@ -51,17 +51,18 @@ public class Query {
 
 
     //tạo bảng
+    //danh mục
 
     public static final String create_TABLE_DRUG_LIST =
             "create table "+TABLE_DRUG_LIST+"(" +
                     "" + DRUG_LIST +" nvarchar  not null primary key)";
 
-
+//thể loại
     public static final String create_TABLE_CATEGORY_DRUG =
             "create table "+TABLE_CATEGORY_DRUG+"(" +
                     "" + DRUG_CATEGORY +" nvarchar not null primary key,"+
                     "" + DRUG_LIST +" nvarchar)";
-
+//thuốc
     public static final String create_TABLE_DRUG =
             "create table "+TABLE_DRUG+"(" +
                     "" + NAME_DRUG +" nvarchar not null primary key ,"+

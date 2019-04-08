@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#CFF7DC</color>
+    <color name="colorPrimary">#293EF7</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="textcolorHeader">#069ECF</color>
     <color name="textColorPrimary">#000000</color>
+    <color name="textBlack">#000000</color>
     <color name="textColorSecondary">#A5A5A5</color>
 
     <!--switch color-->
@@ -16,5 +17,8 @@
     <color name="track_inactive">#66A5A5A5</color>
     <color name="white">#FFFFFF</color>
     <color name="green">#17B91E</color>
+    <color name="placeholder_bg">#dddddd</color>
+    <color name="gray">#474747</color>
 
+<color name="dividerColor">#EAEAEA</color>
 </resources>

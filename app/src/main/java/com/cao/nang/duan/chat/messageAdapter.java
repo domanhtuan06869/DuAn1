@@ -25,7 +25,7 @@ public class messageAdapter  extends RecyclerView.Adapter <messageAdapter.MyView
     @NonNull
     @Override
     public messageAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return new messageAdapter.MyViewHolder(LayoutInflater.from(context).inflate(R.layout.activity_item_name,viewGroup,false));
+        return new messageAdapter.MyViewHolder(LayoutInflater.from(context).inflate(R.layout.activity_item_comment,viewGroup,false));
     }
 
 
@@ -33,12 +33,16 @@ public class messageAdapter  extends RecyclerView.Adapter <messageAdapter.MyView
     @Override
     public void onBindViewHolder(@NonNull messageAdapter.MyViewHolder holder, int position) {
         final int i=position;
-        final Tomessage imageUploadInfo=listdr.get(position);
-       holder.message.setText("\n"+imageUploadInfo.getMessage());
+        final Tomessage tomessage=listdr.get(position);
+        Email email =new Email() ;
+       holder.message.setText("\n"+tomessage.getMessage());
+       holder.email.setText(tomessage.getEmail());
+       holder.date.setText(tomessage.getDate());
 
         holder.setClickListener(new messageAdapter.ItemClickListener() {
             @Override
             public void onClickItem(int pos) {
+
                 // openDetailActivity(categoryDrug.getCategory_drug());
             }
 
@@ -68,15 +72,19 @@ public class messageAdapter  extends RecyclerView.Adapter <messageAdapter.MyView
 
     class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
         private messageAdapter.ItemClickListener mListener;
-        TextView message;
+        TextView message,email, date;
 
 
 
         // Button btn;
         public MyViewHolder(View itemView) {
             super(itemView);
-            message=itemView.findViewById(R.id.tvmess);
+            email=itemView.findViewById(R.id.tvcmtemail);
+            date=itemView.findViewById(R.id.dateitemcmt);
+            message=itemView.findViewById(R.id.tvcontencmtitem);
+
             itemView.setOnClickListener((View.OnClickListener) this);
+
 
 
             itemView.setOnClickListener(this);

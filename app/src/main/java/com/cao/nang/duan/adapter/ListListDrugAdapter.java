@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.cao.nang.duan.ListCategoryDrug;
+import com.cao.nang.duan.drugandhopistal.ListCategoryDrug;
 import com.cao.nang.duan.R;
 import com.cao.nang.duan.model.ListDrug;
 

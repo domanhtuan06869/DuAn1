@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cao.nang.duan">
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
@@ -15,39 +16,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AlarmDrug"></activity>
+        <activity android:name=".alram.AlarmDrug" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name=".drugandhopistal.MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".ScollDrug" />
-        <activity android:name=".chat.MainChat" />
+        <activity android:name=".drugandhopistal.ScollDrug" />
+        <activity android:name=".chat.BangTinActyvity" />
         <activity android:name=".chat.Main2Activity" />
-        <activity android:name=".chat.Main3Activity" />
-        <activity android:name=".chat.itemview" />
-        <activity android:name=".activity_binh_luan" />
-        <activity android:name=".activity_nhom_chat" />
+        <activity android:name=".chat.CommentGroup" />
+        <activity android:name=".chat.DangBaiActivity" />
         <activity
-            android:name=".activity_tim_benh_vien"
+            android:name=".drugandhopistal.activity_tim_benh_vien"
             android:label="Tìm Bệnh Viện"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".ListListDrug"
+            android:name=".drugandhopistal.ListListDrug"
             android:label="Danh Mục Thuốc"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".ListFindHospital" />
-        <activity android:name=".ListSick" />
-        <activity android:name=".resgistration" />
-        <activity android:name=".LoginGroup" />
-        <activity android:name=".ListDrug" />
+        <activity android:name=".drugandhopistal.ListFindHospital" />
+        <activity android:name=".drugandhopistal.ListSick" />
+        <activity android:name=".chat.resgistration" />
+        <activity android:name=".chat.LoginGroup" />
+        <activity android:name=".drugandhopistal.ListDrug" />
         <activity
-            android:name=".ListCategoryDrug"
-            android:parentActivityName=".ListCategoryDrug" />
+            android:name=".drugandhopistal.ListCategoryDrug"
+            android:parentActivityName=".drugandhopistal.ListCategoryDrug" />
         <activity android:name=".WelcomeScreen" />
         <activity
             android:name=".MainActivity"
