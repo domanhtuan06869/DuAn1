@@ -139,7 +139,7 @@ public class StepCounter_activity extends Base {
         Date now = new Date();
         cal.setTime(now);
         long endTime = cal.getTimeInMillis();
-        cal.add(Calendar.DAY_OF_YEAR, -1);
+        cal.add(Calendar.HOUR_OF_DAY, -1);
         long startTime = cal.getTimeInMillis();
 
 
@@ -172,7 +172,7 @@ public class StepCounter_activity extends Base {
         Date now = new Date();
         cal.setTime(now);
         long endTime = cal.getTimeInMillis();
-        cal.add(Calendar.DATE, -1);
+        cal.add(Calendar.HOUR_OF_DAY, -1);
         long startTime = cal.getTimeInMillis();
 
         java.text.DateFormat dateFormat = getDateInstance();
@@ -184,7 +184,7 @@ public class StepCounter_activity extends Base {
 
                         .aggregate(DataType.TYPE_STEP_COUNT_DELTA, DataType.AGGREGATE_STEP_COUNT_DELTA)
 
-                        .bucketByTime(1, TimeUnit.DAYS)
+                        .bucketByTime(20, TimeUnit.HOURS)
                         .setTimeRange(startTime, endTime, TimeUnit.MILLISECONDS)
                         .build();
         // trả về dữ liệu.
@@ -329,6 +329,12 @@ public class StepCounter_activity extends Base {
                                                 ? 0
                                                 : dataSet.getDataPoints().get(0).getValue(Field.FIELD_STEPS).asInt();
                                 Log.i(TAG, "Total steps: " + total);
+                                tvSobuoc.setText(String.valueOf(total));
+                                float sobuoc= Float.parseFloat(tvSobuoc.getText().toString());
+                                float km= (float) (0.0004*sobuoc);
+                                tinhkm.setText(String.valueOf(km+" Km"));
+                                int tinhkalo= (int) (km/1.6*100);
+                                tinhcalo.setText(String.valueOf(tinhkalo+" Calo"));
 
 
                             }
@@ -343,13 +349,15 @@ public class StepCounter_activity extends Base {
     }
 
 
-    public void homnay(View view) {
 
-    }
 
     public void tuannay(View view) {
         classintent(StepsCounterWeek_activity.class);
 
+    }
+
+    public void lammoingay(View view) {
+        fit();
     }
 }
 

@@ -29,6 +29,7 @@ import com.cao.nang.duan.drugandhopistal.ListListDrug_activity;
 import com.cao.nang.duan.drugandhopistal.ListSick_activity;
 import com.cao.nang.duan.drugandhopistal.activity_tim_benh_vien;
 import com.cao.nang.duan.fitnessapi.StepCounter_activity;
+import com.cao.nang.duan.tienich.News;
 import com.cao.nang.duan.tienich.Tinhbeogay_activity;
 import com.google.firebase.database.DatabaseReference;
 
@@ -102,6 +103,7 @@ ConnectDB connectDB;
             classintent(Tinhbeogay_activity.class);
 
         } else if (id == R.id.news) {
+            classintent(News.class);
 
 
         } else if (id == R.id.aboutme) {

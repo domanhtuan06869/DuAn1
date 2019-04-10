@@ -16,9 +16,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Sick_activity"
-            android:parentActivityName=".MainActivity"
-            android:label="Sơ cứu"></activity>
+        <activity android:name=".Aboutme"></activity>
+        <activity
+            android:name=".Sick_activity"
+            android:label="Sơ cứu"
+            android:parentActivityName=".MainActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -88,6 +90,9 @@
             android:name=".drugandhopistal.ListCategoryDrug_activity"
             android:label="Thể loại"
             android:parentActivityName=".drugandhopistal.ListListDrug_activity" />
+        <activity
+            android:name=".tienich.News"
+            android:label="Báo sức khỏe" />
         <activity
             android:name=".fitnessapi.StepCounter_activity"
             android:label="Bước đi hôm nay"

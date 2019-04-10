@@ -78,7 +78,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="60dp"
-            android:text="SOBước"
+            android:text="0"
             android:textColor="#ffff"
             android:textSize="40dp"
             android:textStyle="italic" />
@@ -91,6 +91,19 @@
             android:textColor="#ffff"
             android:textSize="40dp"
             android:textStyle="italic" />
+        <TextView
+            android:onClick="lammoituan"
+
+            android:layout_marginTop="15dp"
+            android:background="@drawable/custom_buttom_2"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Làm mới"
+            android:textColor="#ffff"
+            android:gravity="center_horizontal"
+            android:textSize="25dp"
+            android:textStyle="normal" />
 
     </LinearLayout>
 

@@ -225,7 +225,7 @@ public class StepsCounterWeek_activity extends AppCompatActivity {
                 Value value=dp.getValue(field);
                 tvSobuoctuan.setText(String.valueOf(value));
                 float sobuoc=Float.parseFloat(tvSobuoctuan.getText().toString());
-                float km= (float) (0.002*sobuoc);
+                float km= (float) (0.0004*sobuoc);
                 tinhkmtuan.setText(String.valueOf(km+" Km"));
                 int tinhkalo= (int) (km/1.6*100);
                 tinhcalotuan.setText(String.valueOf(tinhkalo+" Calo"));
@@ -345,5 +345,9 @@ public class StepsCounterWeek_activity extends AppCompatActivity {
     }
 
     public void tuannaytuan(View view) {
+    }
+
+    public void lammoituan(View view) {
+        readHistoryData();
     }
 }
