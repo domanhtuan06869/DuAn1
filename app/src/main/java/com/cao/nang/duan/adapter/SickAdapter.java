@@ -1,6 +1,7 @@
 package com.cao.nang.duan.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.cao.nang.duan.R;
+import com.cao.nang.duan.Sick_activity;
 import com.cao.nang.duan.model.SickList;
 
 import java.util.List;
@@ -39,7 +41,7 @@ public class SickAdapter extends RecyclerView.Adapter<SickAdapter.MyViewHolder> 
         holder.setClickListener(new SickAdapter.ItemClickListener() {
             @Override
             public void onClickItem(int pos) {
-                openDetailActivity(sickList.getTreatment());
+                openDetailActivity(sickList.getSick_name(),sickList.getTreatment());
             }
 
             @Override
@@ -51,14 +53,14 @@ public class SickAdapter extends RecyclerView.Adapter<SickAdapter.MyViewHolder> 
     }
     private void openDetailActivity(String...details)
     {
-      //  Intent i=new Intent(context, ListCategoryDrug_activity.class);
+  Intent i=new Intent(context, Sick_activity.class);
 
-    //    i.putExtra("List_drug",details[0]);
+      i.putExtra("name",details[0]);
 
-        // i.putExtra("DESC_KEY",details[1]);
-        //  i.putExtra("PROP_KEY",details[2]);
+        i.putExtra("cachchua",details[1]);
 
-       // context.startActivity(i);
+
+       context.startActivity(i);
     }
 
     @Override

@@ -31,7 +31,7 @@ public class ListSickDAO {
     }
     public void insertSick(Context context){
         SQLiteDatabase sqLiteDatabase=connectDB.getWritableDatabase();
-        Scanner scanner = new Scanner(context.getResources().openRawResource(R.raw.drug));
+        Scanner scanner = new Scanner(context.getResources().openRawResource(R.raw.sick));
 
         sqLiteDatabase.beginTransaction();
         String line;

@@ -26,6 +26,7 @@ import com.cao.nang.duan.dao.ListListDrugDAO;
 import com.cao.nang.duan.dao.ListSickDAO;
 import com.cao.nang.duan.database.ConnectDB;
 import com.cao.nang.duan.drugandhopistal.ListListDrug_activity;
+import com.cao.nang.duan.drugandhopistal.ListSick_activity;
 import com.cao.nang.duan.drugandhopistal.activity_tim_benh_vien;
 import com.cao.nang.duan.fitnessapi.StepCounter_activity;
 import com.cao.nang.duan.tienich.Tinhbeogay_activity;
@@ -130,8 +131,8 @@ ConnectDB connectDB;
     }
 
     public void Socuu(View view) {
-        //this.insetmodulSick();
-        classintent(Tinhbeogay_activity.class);
+        this.insetmodulSick();
+        classintent(ListSick_activity.class);
 
 
     }
