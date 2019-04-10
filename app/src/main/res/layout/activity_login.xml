@@ -5,12 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".chat.LoginGroup">
+    tools:context=".chatgroup.LoginGroup">
 
 
-    <ImageView
+    <TextView
         android:id="@+id/imageView6"
         android:layout_width="300dp"
+        android:text="@string/dangnhapcd"
+        android:textColor="#028B08"
+        android:textSize="27dp"
+        android:textStyle="bold"
+        android:gravity="center_vertical|center_horizontal"
         android:layout_height="87dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -54,6 +59,7 @@
         android:background="@drawable/customedt"
         android:ems="10"
         android:hint="@string/password"
+        android:password="true"
         android:inputType="textPersonName"
         android:paddingLeft="20dp"
         app:layout_constraintEnd_toEndOf="parent"

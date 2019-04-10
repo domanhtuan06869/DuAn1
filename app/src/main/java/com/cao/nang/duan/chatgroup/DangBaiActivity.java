@@ -1,16 +1,12 @@
-package com.cao.nang.duan.chat;
+package com.cao.nang.duan.chatgroup;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -18,19 +14,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cao.nang.duan.R;
-import com.github.ybq.android.spinkit.style.Circle;
-import com.github.ybq.android.spinkit.style.DoubleBounce;
 import com.github.ybq.android.spinkit.style.FadingCircle;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -64,13 +55,12 @@ public class DangBaiActivity extends AppCompatActivity {
     private EditText content;
     private String chattitle;
     private String contents;
-    Circle mCircleDrawable;
     ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dang_bai);
+        setContentView(R.layout.dang_bai_activity);
         this.initview();
          progressBar = (ProgressBar) findViewById(R.id.spin_kitdangbai);
         FadingCircle wave=new FadingCircle();
@@ -143,10 +133,10 @@ public class DangBaiActivity extends AppCompatActivity {
 
 
         else
-      {                    progressBar.setVisibility(View.VISIBLE);
+      {
 
           StoreProductInformation();
-          progressBar.setVisibility(View.INVISIBLE);
+
         }
     }
 
@@ -154,6 +144,7 @@ public class DangBaiActivity extends AppCompatActivity {
 
     private void StoreProductInformation()
     {
+        progressBar.setVisibility(View.VISIBLE);
 
  /// lấy time cho bài viết
         Calendar calendar = Calendar.getInstance();
@@ -280,10 +271,8 @@ public void  postnotimage(){
 
             ImageUploadInfo imageUploadInfo = new ImageUploadInfo(chattitle,contents, "https://firebasestoage/khongcoanh", email, ngaythang);
 
-            // Getting image upload ID.
             String ImageUploadId = ProductsRef.push().getKey();
 
-            // Adding image upload id s child element into databaseReference.
             ProductsRef.child(ImageUploadId).setValue(imageUploadInfo);
             databaseReference = FirebaseDatabase.getInstance().getReference().child(chattitle);
             Message message = new Message("","","");
@@ -320,6 +309,9 @@ public void  postnotimage(){
   }
 
 
+    public void huy(View view) {
+        finish();
+    }
 }
 
 

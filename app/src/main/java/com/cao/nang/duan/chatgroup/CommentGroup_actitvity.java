@@ -1,4 +1,4 @@
-package com.cao.nang.duan.chat;
+package com.cao.nang.duan.chatgroup;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,7 +26,7 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-public class CommentGroup extends AppCompatActivity {
+public class CommentGroup_actitvity extends AppCompatActivity {
     private ImageView imgView;
     private TextView tvtitlecmt;
     private RecyclerView rcchat;
@@ -45,6 +45,7 @@ public class CommentGroup extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.main_comment_activity);
        imgView = findViewById(R.id.imgView);
         tvtitlecmt = findViewById(R.id.tvtitlecmt);
@@ -88,9 +89,9 @@ public class CommentGroup extends AppCompatActivity {
                     Tomessage tomessage = dataSnapshot1.getValue(Tomessage.class);
                     messageList.add(tomessage);
                 }
-                messageadt = new messageAdapter(CommentGroup.this, messageList);
+                messageadt = new messageAdapter(CommentGroup_actitvity.this, messageList);
 
-                rcchat.setLayoutManager(new LinearLayoutManager(CommentGroup.this));
+                rcchat.setLayoutManager(new LinearLayoutManager(CommentGroup_actitvity.this));
                 messageadt.notifyDataSetChanged();
                rcchat.smoothScrollToPosition(messageList.size() - 1);
                 rcchat.setAdapter(messageadt);

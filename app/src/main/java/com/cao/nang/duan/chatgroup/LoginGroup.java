@@ -1,4 +1,4 @@
-package com.cao.nang.duan.chat;
+package com.cao.nang.duan.chatgroup;
 
 import android.content.Context;
 import android.content.Intent;
@@ -36,6 +36,8 @@ public class LoginGroup  extends Base {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         setContentView(R.layout.activity_login);
         edtEmaildg = (EditText) findViewById(R.id.edtEmaildg);
         edtpass = (EditText) findViewById(R.id.edtpass);
@@ -45,7 +47,7 @@ public class LoginGroup  extends Base {
         chuacotk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                classintent(resgistration.class);
+                classintent(Resgistration_activity.class);
             }
         });
         progressBar=findViewById(R.id.spin_kit);

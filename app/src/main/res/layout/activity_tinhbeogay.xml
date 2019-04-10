@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".tienich.Tinhbeogay_activity">
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginRight="5dp"
+            android:text="@string/chieu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/edtChieucao"
+            android:hint="0.0"
+            android:paddingLeft="20dp"
+            android:phoneNumber="true"
+            android:background="@drawable/custom_buttom_3"
+            android:layout_width="80dp"
+            android:layout_height="40dp" />
+        <TextView
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginLeft="5dp"
+            android:text="Mét"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="2dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginRight="5dp"
+            android:text="@string/cannang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:background="@drawable/custom_buttom_3"
+            android:id="@+id/edtCannang"
+            android:phoneNumber="true"
+            android:paddingLeft="20dp"
+            android:hint="00"
+            android:layout_width="80dp"
+            android:layout_height="40dp" />
+        <TextView
+            android:text="KG"
+            android:layout_marginLeft="5dp"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:background="#0126F7"
+        android:layout_height="2dp" />
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="20dp"
+            android:textColor="#DD0303"
+            android:layout_marginRight="30dp"
+            android:text="@string/ketqua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:id="@+id/tvketQuaDo"
+            android:text="0.0"
+            android:textSize="25dp"
+            android:textColor="#DD0303"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:background="#0126F7"
+        android:layout_height="2dp" />
+  <LinearLayout
+      android:layout_marginTop="20dp"
+      android:layout_gravity="center_horizontal"
+      android:layout_width="wrap_content"
+      android:orientation="horizontal"
+      android:layout_height="wrap_content">
+      <TextView
+          android:text="Gầy"
+          android:textSize="20dp"
+          android:id="@+id/gay"
+          android:textColor="@color/textBlack"
+          android:layout_marginRight="30dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
+      <TextView
+          android:textSize="20dp"
+          android:id="@+id/gay1"
+          android:textColor="@color/textBlack"
+          android:layout_marginRight="30dp"
+          android:layout_marginLeft="45dp"
+          android:text="@string/gay"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
+  </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="20dp"
+            android:id="@+id/binhthuong"
+            android:textColor="@color/textBlack"
+            android:text="Bình thường"
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="20dp"
+            android:id="@+id/binhthuong1"
+            android:textColor="@color/textBlack"
+            android:layout_marginRight="30dp"
+            android:text="18.5 => 24.9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/thuacan"
+            android:textSize="20dp"
+            android:textColor="@color/textBlack"
+            android:text="Thừa cân"
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="20dp"
+            android:id="@+id/thuacan1"
+            android:textColor="@color/textBlack"
+            android:layout_marginRight="30dp"
+            android:text="   25 => 29.9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/beophi"
+            android:textSize="20dp"
+            android:textColor="@color/textBlack"
+            android:text="Béo phì"
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/beophi1"
+            android:textSize="20dp"
+            android:textColor="@color/textBlack"
+            android:layout_marginRight="30dp"
+            android:text="       > 30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

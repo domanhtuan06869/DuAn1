@@ -13,7 +13,7 @@ import com.cao.nang.duan.model.SickList;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListSick extends AppCompatActivity {
+public class ListSick_activity extends AppCompatActivity {
         ListSickDAO listSickDAO=new ListSickDAO(this);
         SickAdapter sickAdapter;
     private RecyclerView rcListSick;
@@ -23,6 +23,8 @@ public class ListSick extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         setContentView(R.layout.activity_list_sick);
         rcListSick = (RecyclerView) findViewById(R.id.rcListSick);
         init();

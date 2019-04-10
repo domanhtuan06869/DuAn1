@@ -51,7 +51,7 @@ public class SickAdapter extends RecyclerView.Adapter<SickAdapter.MyViewHolder> 
     }
     private void openDetailActivity(String...details)
     {
-      //  Intent i=new Intent(context, ListCategoryDrug.class);
+      //  Intent i=new Intent(context, ListCategoryDrug_activity.class);
 
     //    i.putExtra("List_drug",details[0]);
 

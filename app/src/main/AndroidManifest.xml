@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cao.nang.duan">
-    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -16,42 +16,81 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".alram.AlarmDrug" />
+        <activity android:name=".Sick_activity"></activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
         <activity
+            android:name=".fitnessapi.StepsCounterWeek_activity"
+            android:label="Bước đi tuần này"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".tienich.Tinhbeogay_activity"
+            android:label="Tính béo gầy BMI"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".alram.AlarmDrug_activity"
+            android:label="Báo uống thuốc"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".drugandhopistal.MapsActivity"
-            android:label="@string/title_activity_maps" />
-        <activity android:name=".drugandhopistal.ScollDrug" />
-        <activity android:name=".chat.BangTinActyvity" />
-        <activity android:name=".chat.Main2Activity" />
-        <activity android:name=".chat.CommentGroup" />
-        <activity android:name=".chat.DangBaiActivity" />
+            android:label="@string/title_activity_maps"
+            android:parentActivityName=".drugandhopistal.activity_tim_benh_vien" />
+        <activity
+            android:name=".drugandhopistal.ScollDrug_activity"
+            android:label="Thuốc"
+            android:parentActivityName=".drugandhopistal.ListListDrug_activity" />
+        <activity
+            android:name=".chatgroup.BangTinActyvity"
+            android:label="Bảng Tin"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".chatgroup.CommentGroup_actitvity"
+            android:label="Bình luận" />
+        <activity
+            android:name=".chatgroup.DangBaiActivity"
+            android:label="Đăng Bài" />
         <activity
             android:name=".drugandhopistal.activity_tim_benh_vien"
             android:label="Tìm Bệnh Viện"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".drugandhopistal.ListListDrug"
+            android:name=".drugandhopistal.ListListDrug_activity"
             android:label="Danh Mục Thuốc"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme" />
         <activity android:name=".drugandhopistal.ListFindHospital" />
-        <activity android:name=".drugandhopistal.ListSick" />
-        <activity android:name=".chat.resgistration" />
-        <activity android:name=".chat.LoginGroup" />
-        <activity android:name=".drugandhopistal.ListDrug" />
         <activity
-            android:name=".drugandhopistal.ListCategoryDrug"
-            android:parentActivityName=".drugandhopistal.ListCategoryDrug" />
-        <activity android:name=".WelcomeScreen" />
+            android:name=".drugandhopistal.ListSick_activity"
+            android:label="Loại Sơ Cứu"
+            android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".chatgroup.Resgistration_activity"
+            android:label="Đăng kí"
+            android:parentActivityName=".chatgroup.LoginGroup" />
+        <activity
+            android:name=".chatgroup.LoginGroup"
+            android:label="Đăng Nhập"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".drugandhopistal.ListDrug_activity"
+            android:label="Danh sách thuốc"
+            android:parentActivityName=".drugandhopistal.ListListDrug_activity" />
+        <activity
+            android:name=".drugandhopistal.ListCategoryDrug_activity"
+            android:label="Thể loại"
+            android:parentActivityName=".drugandhopistal.ListListDrug_activity" />
+        <activity
+            android:name=".fitnessapi.StepCounter_activity"
+            android:label="Bước đi hôm nay"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".WelcomeScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

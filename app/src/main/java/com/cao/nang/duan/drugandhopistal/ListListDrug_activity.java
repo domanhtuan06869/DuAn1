@@ -13,7 +13,7 @@ import com.cao.nang.duan.model.ListDrug;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListListDrug extends AppCompatActivity {
+public class ListListDrug_activity extends AppCompatActivity {
     private RecyclerView rcListListDrug;
     List<ListDrug> listDrugList=new ArrayList<>();
     ListListDrugDAO listListDrugDAO=new ListListDrugDAO(this);

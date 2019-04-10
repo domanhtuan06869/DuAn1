@@ -1,4 +1,4 @@
-package com.cao.nang.duan.chat;
+package com.cao.nang.duan.chatgroup;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

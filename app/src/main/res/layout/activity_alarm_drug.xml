@@ -19,7 +19,7 @@
         android:layout_height="fill_parent"
         android:orientation="vertical"
         android:padding="9dp"
-        tools:context=".alram.AlarmDrug">
+        tools:context=".alram.AlarmDrug_activity">
 
         <TextView
             style="@style/Headings"
@@ -37,7 +37,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:layout_weight="1.8"
             android:orientation="horizontal">
             <TextView
@@ -171,11 +171,10 @@
         </LinearLayout>
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:background="@drawable/custom_buttom_3"
-            android:layout_height="0dp"
+            android:layout_height="80dp"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="1.5"
             android:onClick="setAlarm"
             android:text="@string/go" />
     </LinearLayout>

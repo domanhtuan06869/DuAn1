@@ -15,7 +15,7 @@ import com.cao.nang.duan.model.CategoryDrug;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListCategoryDrug extends Base {
+public class ListCategoryDrug_activity extends Base {
     List<CategoryDrug> categoryDrugList=new ArrayList<>();
     ListCategoryDAO listCategoryDAO=new ListCategoryDAO(this);
     CategoryDrugAdapter categoryDrugAdapter;
@@ -24,6 +24,8 @@ public class ListCategoryDrug extends Base {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         setContentView(R.layout.activity_list_category_drug);
         Intent in =getIntent();
         Bundle b=in.getExtras();
@@ -35,7 +37,7 @@ public class ListCategoryDrug extends Base {
         categoryDrugAdapter=new CategoryDrugAdapter(this,categoryDrugList);
         rcCategory.setLayoutManager(new LinearLayoutManager(this));
         rcCategory.setAdapter(categoryDrugAdapter);
-        showToast(drunglist);
+
 
 
 

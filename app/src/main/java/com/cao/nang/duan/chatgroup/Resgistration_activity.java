@@ -1,4 +1,4 @@
-package com.cao.nang.duan.chat;
+package com.cao.nang.duan.chatgroup;
 
 import android.support.annotation.NonNull;
 import android.os.Bundle;
@@ -17,7 +17,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class resgistration extends Base {
+public class Resgistration_activity extends Base {
     private EditText edtEmail;
     private EditText edtPassword ,getEdtPassword2;
     CheckBox checkBox;
@@ -28,6 +28,8 @@ public class resgistration extends Base {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         setContentView(R.layout.activity_resgistration);
         edtEmail = (EditText) findViewById(R.id.edtEmail);
         edtPassword = (EditText) findViewById(R.id.edtPassword);
@@ -70,11 +72,11 @@ public class resgistration extends Base {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(!task.isSuccessful()){
-                                Toast.makeText(resgistration.this,"định dạng sai hoặc email đã tồn tại",Toast.LENGTH_LONG).show();
+                                Toast.makeText(Resgistration_activity.this,"định dạng sai hoặc email đã tồn tại",Toast.LENGTH_LONG).show();
                                 Log.e("ero", String.valueOf(task.getException()));
                             }
                             else{
-                                Toast.makeText(resgistration.this,"đăng kí tài khoản thành công",Toast.LENGTH_LONG).show();
+                                Toast.makeText(Resgistration_activity.this,"đăng kí tài khoản thành công",Toast.LENGTH_LONG).show();
                                 classintent(LoginGroup.class);
                                 progressBar.setVisibility(View.INVISIBLE);
 

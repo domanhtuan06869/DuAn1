@@ -5,38 +5,33 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/steps"
             android:icon="@drawable/hospital_4"
-            android:title="Benh vien" />
+            android:title="Đếm bước đi" />
     </group>
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/khoiluongct"
             android:icon="@drawable/pills"
-            android:title="Thuoc" />
+            android:title="Đo khối lượng cơ thể" />
     </group>
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/news"
             android:icon="@drawable/medicine"
-            android:title="Cong dong" />
+            android:title="Báo sức khỏe" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/aboutme"
+            android:icon="@drawable/useerr"
+            android:title="Về chúng tôi" />
     </group>
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/cardiogram"
-            android:title="Cap cuu" />
-    </group>
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_manage1"
-            android:icon="@drawable/smartphone"
-            android:title="Bao gio uong thuoc" />
-    </group>
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_manage12"
+            android:id="@+id/exits"
             android:icon="@drawable/eye"
-            android:title="Thoat" />
+            android:title="Thoát" />
     </group>
 </menu>

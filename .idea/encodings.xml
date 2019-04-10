@@ -3,7 +3,7 @@
   <component name="Encoding" defaultCharsetForPropertiesFiles="windows-1252">
     <file url="file://$PROJECT_DIR$/app/build.gradle" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/cao/nang/duan/MainActivity.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cao/nang/duan/chat/resgistration.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cao/nang/duan/chatgroup/Resgistration_activity.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/raw/category.csv" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/raw/district.csv" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/raw/drug.csv" charset="UTF-8" />

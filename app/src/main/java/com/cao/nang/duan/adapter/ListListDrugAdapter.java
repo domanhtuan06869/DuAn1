@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.cao.nang.duan.drugandhopistal.ListCategoryDrug;
+import com.cao.nang.duan.drugandhopistal.ListCategoryDrug_activity;
 import com.cao.nang.duan.R;
 import com.cao.nang.duan.model.ListDrug;
 
@@ -53,7 +53,7 @@ public class ListListDrugAdapter extends RecyclerView.Adapter<ListListDrugAdapte
     }
     private void openDetailActivity(String...details)
     {
-       Intent i=new Intent(context, ListCategoryDrug.class);
+       Intent i=new Intent(context, ListCategoryDrug_activity.class);
 
         i.putExtra("List_Category",details[0]);
 

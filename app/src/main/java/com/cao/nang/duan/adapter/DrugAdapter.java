@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.cao.nang.duan.R;
-import com.cao.nang.duan.drugandhopistal.ScollDrug;
+import com.cao.nang.duan.drugandhopistal.ScollDrug_activity;
 import com.cao.nang.duan.model.Drug;
 
 import java.util.List;
@@ -55,7 +55,7 @@ public class DrugAdapter extends RecyclerView.Adapter<DrugAdapter.MyViewHolder> 
     }
     private void openDetailActivity(String...details)
     {
-       Intent i=new Intent(context, ScollDrug.class);
+       Intent i=new Intent(context, ScollDrug_activity.class);
      i.putExtra("Name_Drug",details[0]);
      i.putExtra("Price",details[1]);
      i.putExtra("Ingredient",details[2]);

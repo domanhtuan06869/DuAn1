@@ -1,4 +1,4 @@
-package com.cao.nang.duan.chat;
+package com.cao.nang.duan.chatgroup;
 
 import android.content.Context;
 import android.content.Intent;
@@ -62,7 +62,7 @@ public class ImgAdapter extends RecyclerView.Adapter <ImgAdapter.MyViewHolder> {
     }
     private void openDetailActivity(String...details)
     {
-       Intent i=new Intent(context, CommentGroup.class);
+       Intent i=new Intent(context, CommentGroup_actitvity.class);
 
       i.putExtra("title",details[0]);
 

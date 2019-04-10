@@ -15,20 +15,25 @@ import com.cao.nang.duan.model.Drug;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListDrug extends Base {
+public class ListDrug_activity extends Base {
     private RecyclerView rcviewDrug;
     ListDrugDAO listDrugDAO=new ListDrugDAO(this);
     List<Drug>drugList=new ArrayList<>();
     DrugAdapter drugAdapter;
-
+    String category;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         setContentView(R.layout.activity_list_drug);
         Intent in=getIntent();
         Bundle b= in.getExtras();
-        String category=b.getString("List_Category");
+        try {
 
+
+          category = b.getString("Category");
+        }catch (Exception category){}
         rcviewDrug = (RecyclerView) findViewById(R.id.rcviewDrug);
        drugList= listDrugDAO.getAllDurgWithCategory(category);
         drugAdapter=new DrugAdapter(this,drugList);

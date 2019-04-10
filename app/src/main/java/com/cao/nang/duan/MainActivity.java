@@ -1,6 +1,11 @@
 package com.cao.nang.duan;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -11,29 +16,33 @@ import android.view.Menu;
 
 import android.view.MenuItem;
 
-import com.cao.nang.duan.alram.AlarmDrug;
+import com.cao.nang.duan.alram.AlarmDrug_activity;
 import com.cao.nang.duan.base.Base;
-import com.cao.nang.duan.chat.LoginGroup;
+import com.cao.nang.duan.chatgroup.LoginGroup;
 import com.cao.nang.duan.dao.FindDAO;
 import com.cao.nang.duan.dao.ListCategoryDAO;
 import com.cao.nang.duan.dao.ListDrugDAO;
 import com.cao.nang.duan.dao.ListListDrugDAO;
 import com.cao.nang.duan.dao.ListSickDAO;
 import com.cao.nang.duan.database.ConnectDB;
-import com.cao.nang.duan.drugandhopistal.ListListDrug;
+import com.cao.nang.duan.drugandhopistal.ListListDrug_activity;
 import com.cao.nang.duan.drugandhopistal.activity_tim_benh_vien;
+import com.cao.nang.duan.fitnessapi.StepCounter_activity;
+import com.cao.nang.duan.tienich.Tinhbeogay_activity;
 import com.google.firebase.database.DatabaseReference;
 
 public class MainActivity extends Base
         implements NavigationView.OnNavigationItemSelectedListener {
 DatabaseReference databaseReference;
 ConnectDB connectDB;
+    private static final int MY_PERMISSIONS_REQUEST = 1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        checkPermission();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -46,7 +55,6 @@ ConnectDB connectDB;
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
 
 
     }
@@ -76,9 +84,7 @@ ConnectDB connectDB;
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -89,17 +95,18 @@ ConnectDB connectDB;
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.steps) {
+            classintent(StepCounter_activity.class);
+        } else if (id == R.id.khoiluongct) {
+            classintent(Tinhbeogay_activity.class);
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.news) {
 
-        } else if (id == R.id.nav_manage) {
 
-        } else if (id == R.id.nav_manage1) {
+        } else if (id == R.id.aboutme) {
 
-        } else if (id == R.id.nav_manage12) {
+        } else if (id == R.id.exits) {
+            System.exit(0);
 
         }
 
@@ -115,7 +122,7 @@ ConnectDB connectDB;
 
     public void Thuoc(View view) {
         this.insertModulListDrug();
-        classintent(ListListDrug.class);
+        classintent(ListListDrug_activity.class);
     }
 
     public void CongDong(View view) {
@@ -123,7 +130,8 @@ ConnectDB connectDB;
     }
 
     public void Socuu(View view) {
-        this.insetmodulSick();
+        //this.insetmodulSick();
+        classintent(Tinhbeogay_activity.class);
 
 
     }
@@ -159,6 +167,59 @@ ConnectDB connectDB;
     }
 
     public void baothuc(View view) {
-        classintent(AlarmDrug.class);
+        classintent(AlarmDrug_activity.class);
+    }
+
+    private void checkPermission() {
+        Log.d("checkPermission","run");
+        String[] listPermission = new String[] {Manifest.permission.ACCESS_FINE_LOCATION,
+                Manifest.permission.READ_EXTERNAL_STORAGE};
+        boolean isOn = false;
+
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+
+        } else {
+
+            isOn = true;
+        }
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+
+        } else {
+
+            isOn = true;
+        }
+
+        if (isOn){
+            Log.d("request", "go");
+            ActivityCompat.requestPermissions(this, listPermission, MY_PERMISSIONS_REQUEST);
+        }
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        Log.d("size", ">> " + grantResults.length);
+        if (requestCode == 1) {
+            for (int i = 0; i < grantResults.length; i++) {
+                switch (i) {
+                    case 0:
+                        if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {
+
+                        } else {
+
+                        }
+                        break;
+                    case 1:
+                        if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {
+
+                        } else {
+
+                        }
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+        }
     }
 }
+

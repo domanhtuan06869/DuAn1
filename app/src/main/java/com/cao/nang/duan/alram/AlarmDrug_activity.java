@@ -17,8 +17,8 @@ import android.widget.Toast;
 
 import com.cao.nang.duan.R;
 
-public class AlarmDrug extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener, AdapterView.OnItemSelectedListener {
-    SeekBar seekBar1,seekBar2;
+public class AlarmDrug_activity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener, AdapterView.OnItemSelectedListener {
+    SeekBar seekBarinterval,seekBarvol;
     Spinner spinner ;
     int gap,vol,maxVal;
     private Spinner hours, min;
@@ -26,11 +26,13 @@ public class AlarmDrug extends AppCompatActivity implements SeekBar.OnSeekBarCha
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         setContentView(R.layout.activity_alarm_drug);
-        seekBar1=(SeekBar)findViewById(R.id.interval);
-        seekBar1.setOnSeekBarChangeListener(this);
-        seekBar2=(SeekBar)findViewById(R.id.vol);
-        seekBar2.setOnSeekBarChangeListener(this);
+        seekBarinterval=(SeekBar)findViewById(R.id.interval);
+        seekBarinterval.setOnSeekBarChangeListener(this);
+        seekBarvol=(SeekBar)findViewById(R.id.vol);
+        seekBarvol.setOnSeekBarChangeListener(this);
         spinner= (Spinner) findViewById(R.id.count);
         spinner.setOnItemSelectedListener(this);
 
@@ -57,7 +59,7 @@ public class AlarmDrug extends AppCompatActivity implements SeekBar.OnSeekBarCha
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress,
                                   boolean fromUser) {
-        if(seekBar.equals(seekBar1))
+        if(seekBar.equals(seekBarinterval))
             gap=progress;
         else
             vol=progress;
@@ -67,7 +69,7 @@ public class AlarmDrug extends AppCompatActivity implements SeekBar.OnSeekBarCha
     }
     @Override
     public void onStopTrackingTouch(SeekBar seekBar) {
-        if(seekBar.equals(seekBar1))
+        if(seekBar.equals(seekBarinterval))
             Toast.makeText(getApplicationContext(),"thời gian báo "+gap+" phút", Toast.LENGTH_SHORT).show();
         else
             Toast.makeText(getApplicationContext(),"Volume : "+(int)((vol*maxVal)/40), Toast.LENGTH_SHORT).show();

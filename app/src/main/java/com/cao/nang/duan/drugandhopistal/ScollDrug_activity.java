@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import com.cao.nang.duan.R;
 
-public class ScollDrug extends AppCompatActivity {
+public class ScollDrug_activity extends AppCompatActivity {
     private TextView tvNameDrug;
     private TextView tvGiathuoc;
     private TextView tvThanhphan;
@@ -21,6 +21,8 @@ public class ScollDrug extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         setContentView(R.layout.activity_scoll_drug);
          this.init();
          this.getIntentDrug();

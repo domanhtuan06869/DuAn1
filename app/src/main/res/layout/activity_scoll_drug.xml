@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".drugandhopistal.ScollDrug">
+    tools:context=".drugandhopistal.ScollDrug_activity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -26,13 +26,13 @@
                 android:paddingLeft="20dp"
                 android:paddingTop="6dp"
                 android:text="ten thuoc"
-                android:background="@drawable/customtv"
+                android:background="@drawable/custom_buttom_3"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                android:textColor="@color/white"
+                android:textColor="@color/textBlack"
                 android:layout_height="55dp" />
             <LinearLayout
-                android:background="@drawable/customtv"
+                android:background="@drawable/custom_buttom_3"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
@@ -42,7 +42,7 @@
                     android:paddingLeft="20dp"
                     android:textSize="20dp"
                     android:textStyle="bold"
-                    android:textColor="@color/white"
+                    android:textColor="@color/textBlack"
 
                     android:layout_width="wrap_content"
                     android:text="@string/giathuoc"
@@ -54,13 +54,13 @@
                     android:textStyle="normal"
                     android:text="gia"
                     android:id="@+id/tvGiathuoc"
-                    android:textColor="@color/white"
+                    android:textColor="@color/textBlack"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
             <LinearLayout
-                android:background="@drawable/customtv"
+                android:background="@drawable/custom_buttom_3"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
@@ -70,7 +70,7 @@
                     android:paddingLeft="20dp"
                     android:textSize="15dp"
                     android:textStyle="bold"
-                    android:textColor="@color/white"
+                    android:textColor="@color/textBlack"
 
                     android:layout_width="wrap_content"
                     android:text="@string/thanhphan"
@@ -83,23 +83,23 @@
                     android:text="thanh phan"
                     android:paddingRight="4dp"
                     android:id="@+id/tvThanhphan"
-                    android:textColor="@color/white"
+                    android:textColor="@color/textBlack"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
             <LinearLayout
-                android:background="@drawable/customtv"
+                android:background="@drawable/custom_buttom_3"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
-                android:layout_height="55dp">
+                android:layout_height="wrap_content">
                 <TextView
                     android:paddingTop="4dp"
                     android:paddingLeft="20dp"
                     android:textSize="15dp"
                     android:textStyle="bold"
-                    android:textColor="@color/white"
+                    android:textColor="@color/textBlack"
 
                     android:layout_width="wrap_content"
                     android:text="@string/chidinh"
@@ -112,13 +112,13 @@
                     android:paddingRight="4dp"
                     android:text="chi dinh"
                     android:id="@+id/tvChidinh"
-                    android:textColor="@color/white"
+                    android:textColor="@color/textBlack"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
             <LinearLayout
-                android:background="@drawable/customtv"
+                android:background="@drawable/custom_buttom_3"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
@@ -128,7 +128,7 @@
                     android:paddingLeft="20dp"
                     android:textSize="15dp"
                     android:textStyle="bold"
-                    android:textColor="@color/white"
+                    android:textColor="@color/textBlack"
                     android:layout_width="wrap_content"
                     android:text="@string/chongchidinh"
                     android:layout_height="wrap_content" />
@@ -140,13 +140,13 @@
                     android:text="chong cd"
                     android:id="@+id/tvChongcd"
                     android:paddingRight="4dp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/textBlack"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
             <LinearLayout
-                android:background="@drawable/customtv"
+                android:background="@drawable/custom_buttom_3"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
@@ -156,7 +156,7 @@
                     android:paddingLeft="20dp"
                     android:textSize="15dp"
                     android:textStyle="bold"
-                    android:textColor="@color/white"
+                    android:textColor="@color/textBlack"
 
                     android:layout_width="wrap_content"
                     android:text="@string/cachdung"
@@ -168,13 +168,13 @@
                     android:textStyle="normal"
                     android:id="@+id/tvCachDung"
                     android:text="cách dung"
-                    android:textColor="@color/white"
+                    android:textColor="@color/textBlack"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
             <LinearLayout
-                android:background="@drawable/customtv"
+                android:background="@drawable/custom_buttom_3"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
@@ -182,28 +182,27 @@
                 <TextView
                     android:paddingTop="4dp"
                     android:paddingLeft="20dp"
-                    android:textSize="20dp"
+                    android:textSize="15dp"
                     android:textStyle="bold"
-                    android:textColor="@color/white"
+                    android:textColor="@color/textBlack"
 
                     android:layout_width="wrap_content"
                     android:text="@string/tacdungphu"
                     android:layout_height="wrap_content" />
                 <TextView
-                    android:paddingTop="4dp"
                     android:paddingLeft="5dp"
                     android:textSize="15dp"
                     android:textStyle="normal"
                     android:text="tach dung phu"
                     android:id="@+id/tvTacdungPhu"
-                    android:textColor="@color/white"
+                    android:textColor="@color/textBlack"
                     android:layout_width="wrap_content"
                     android:paddingRight="5dp"
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
             <LinearLayout
-                android:background="@drawable/customtv"
+                android:background="@drawable/custom_buttom_3"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
@@ -213,7 +212,7 @@
                     android:paddingLeft="20dp"
                     android:textSize="15dp"
                     android:textStyle="bold"
-                    android:textColor="@color/white"
+                    android:textColor="@color/textBlack"
 
                     android:layout_width="wrap_content"
                     android:text="@string/chuy"
@@ -225,7 +224,7 @@
                     android:textStyle="normal"
                     android:text="chu y"
                     android:id="@+id/tvChuY"
-                    android:textColor="@color/white"
+                    android:textColor="@color/textBlack"
                     android:paddingRight="5dp"
 
                     android:layout_width="wrap_content"
