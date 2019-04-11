@@ -29,7 +29,9 @@ import com.cao.nang.duan.drugandhopistal.ListListDrug_activity;
 import com.cao.nang.duan.drugandhopistal.ListSick_activity;
 import com.cao.nang.duan.drugandhopistal.activity_tim_benh_vien;
 import com.cao.nang.duan.fitnessapi.StepCounter_activity;
+import com.cao.nang.duan.tienich.Aboutme;
 import com.cao.nang.duan.tienich.News;
+import com.cao.nang.duan.tienich.TinhLuongNuoc_activity;
 import com.cao.nang.duan.tienich.Tinhbeogay_activity;
 import com.google.firebase.database.DatabaseReference;
 
@@ -102,7 +104,10 @@ ConnectDB connectDB;
         } else if (id == R.id.khoiluongct) {
             classintent(Tinhbeogay_activity.class);
 
-        }else if(id==R.id.baouongthuoc){
+        }else  if(id==R.id.ncothe){
+            classintent(TinhLuongNuoc_activity.class);
+        }
+        else if(id==R.id.baouongthuoc){
           classintent(AlarmDrug_activity.class);
         }
 

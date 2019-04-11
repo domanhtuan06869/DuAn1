@@ -17,6 +17,12 @@
     </group>
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/ncothe"
+            android:icon="@drawable/banchan"
+            android:title="Đo khối lượng nước cần " />
+    </group>
+    <group android:checkableBehavior="single">
+        <item
             android:id="@+id/baouongthuoc"
             android:icon="@drawable/baouongthuoc"
             android:title="Báo uống thuốc" />

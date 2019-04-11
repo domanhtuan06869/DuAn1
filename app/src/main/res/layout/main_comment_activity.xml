@@ -30,6 +30,7 @@
                 android:src="@drawable/ic_launcher_foreground" />
 
             <TextView
+                android:textColor="@color/textBlack"
                 android:id="@+id/tvtitlecmt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -39,6 +40,7 @@
 
             <TextView
                 android:id="@+id/tvcontentcmt"
+                android:textColor="@color/textBlack"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"

@@ -16,10 +16,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Aboutme"
-            android:parentActivityName=".MainActivity"
+        <activity android:name=".tienich.TinhLuongNuoc_activity"
+            android:label="Tính lượng nước"
+            android:parentActivityName=".tienich.TinhLuongNuoc_activity"></activity>
+        <activity
+            android:name=".tienich.Aboutme"
             android:label="Về Chúng Tôi"
-            ></activity>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".drugandhopistal.Sick_activity"
             android:label="Sơ cứu"
@@ -95,6 +98,7 @@
             android:parentActivityName=".drugandhopistal.ListListDrug_activity" />
         <activity
             android:name=".tienich.News"
+            android:parentActivityName=".MainActivity"
             android:label="Báo sức khỏe" />
         <activity
             android:name=".fitnessapi.StepCounter_activity"

@@ -21,6 +21,7 @@ public class News extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activity_news);
         frameLayout = (FrameLayout) findViewById(R.id.frameLayout);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
