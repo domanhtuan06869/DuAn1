@@ -88,7 +88,7 @@ tinh();
                     binhthuong1.setTextColor(Color.BLACK);
 
                 }
-                else {
+                else if(kq>30) {
                     beophi.setTextColor(Color.GREEN);
                     beophi1.setTextColor(Color.GREEN);
                     gay.setTextColor(Color.BLACK);
@@ -151,7 +151,7 @@ tinh();
                     binhthuong.setTextColor(Color.BLACK);
                     binhthuong1.setTextColor(Color.BLACK);
                 }
-                else {
+                else if(kq2>30) {
                     beophi.setTextColor(Color.GREEN);
                     beophi1.setTextColor(Color.GREEN);
                     gay.setTextColor(Color.BLACK);

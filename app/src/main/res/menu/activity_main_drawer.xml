@@ -18,7 +18,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/ncothe"
-            android:icon="@drawable/banchan"
+            android:icon="@drawable/nuoc"
             android:title="Đo khối lượng nước cần " />
     </group>
     <group android:checkableBehavior="single">

@@ -30,6 +30,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 
 import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -226,7 +227,8 @@ public class StepsCounterWeek_activity extends AppCompatActivity {
                 tvSobuoctuan.setText(String.valueOf(value));
                 float sobuoc=Float.parseFloat(tvSobuoctuan.getText().toString());
                 float km= (float) (0.0004*sobuoc);
-                tinhkmtuan.setText(String.valueOf(km+" Km"));
+                DecimalFormat df = new DecimalFormat("0.00");
+                tinhkmtuan.setText(String.valueOf( df.format(km)+" Km"));
                 int tinhkalo= (int) (km/1.6*100);
                 tinhcalotuan.setText(String.valueOf(tinhkalo+" Calo"));
 

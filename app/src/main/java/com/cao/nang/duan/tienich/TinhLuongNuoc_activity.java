@@ -38,7 +38,7 @@ public class TinhLuongNuoc_activity extends Base {
                   DecimalFormat df = new DecimalFormat("0.00");
                   float ketqua = (float) (tinh * 0.03);
                   df.format(ketqua);
-                  tvketQuanc.setText(String.valueOf(ketqua+" lít"));
+                  tvketQuanc.setText(String.valueOf(ketqua+" lít "));
               }catch (NumberFormatException n){}
             }
 

@@ -14,10 +14,14 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/imageView5"
@@ -43,6 +47,11 @@
                 android:textSize="20dp"
                 android:textStyle="bold" />
         </LinearLayout>
-
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:background="@color/textBlack"
+            android:layout_height="1dp">
+        </TextView>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
