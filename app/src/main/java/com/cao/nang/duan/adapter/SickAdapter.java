@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.cao.nang.duan.R;
-import com.cao.nang.duan.Sick_activity;
+import com.cao.nang.duan.drugandhopistal.Sick_activity;
 import com.cao.nang.duan.model.SickList;
 
 import java.util.List;

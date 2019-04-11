@@ -66,6 +66,14 @@
         android:layout_gravity="center_horizontal"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_launcher_foreground"/>
+        <TextView
+            android:textSize="19dp"
+            android:background="#EBE9E9"
+            android:textColor="@color/textBlack"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:text="Bình Luận"
+            android:layout_height="wrap_content" />
     <TextView
 
         android:background="#888888"

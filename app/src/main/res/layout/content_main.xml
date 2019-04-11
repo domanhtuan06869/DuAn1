@@ -1,166 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:background="@color/colorPrimary"
-    tools:context=".MainActivity"
-    tools:showIn="@layout/app_bar_main">
+    tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
+    <ScrollView
+        android:paddingTop="70dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="40dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="232dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:id="@+id/benhvien"
-            android:onClick="BenhVien"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                app:srcCompat="@drawable/hospital_4" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:text="@string/benhvien" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/thuoc"
-            android:onClick="Thuoc"
-            android:layout_width="126dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                app:srcCompat="@drawable/pills" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:text="@string/thuoc" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="342dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="40dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
-
-        <LinearLayout
-            android:id="@+id/congdong"
-            android:onClick="CongDong"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="110dp"
-                app:srcCompat="@drawable/medicine" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:text="@string/congdong" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/socuu"
-            android:onClick="Socuu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="70dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                app:srcCompat="@drawable/cardiogram" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:text="@string/socuu" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/goicapcuu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="40dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="153dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-        tools:layout_editor_absoluteX="40dp">
-
-
+        android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="baothuc"
-            android:orientation="vertical">
+            android:orientation="vertical" >
 
-            <ImageView
-                android:layout_width="300dp"
-                android:layout_height="110dp"
-                android:background="@drawable/baothuc" />
-
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:onClick="BenhVien"
+                android:background="@drawable/custom_buttom_7"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:text="Báo uống thuốc"
-                android:textColor="#FF1100" />
+                android:orientation="vertical"
+                android:padding="5dp">
+                <ImageView
+                    android:background="@drawable/findhosspitail"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp" />
+                <TextView
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="#1632D3"
+                    android:gravity="center_horizontal"
+                    android:text="Tìm Bệnh Viện"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:background="@drawable/custom_buttom_7"
+                android:onClick="Thuoc"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:background="@drawable/drug"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp" />
+                <TextView
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="#1632D3"
+                    android:gravity="center_horizontal"
+                    android:text="Danh Mục Thuốc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_buttom_7"
+                android:onClick="Socuu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:background="@drawable/socuu"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp" />
+                <TextView
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="#1632D3"
+                    android:gravity="center_horizontal"
+                    android:text="Sơ Cứu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:onClick="CongDong"
+                android:background="@drawable/custom_buttom_7"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:background="@drawable/communityhealth"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp" />
+                <TextView
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="#1632D3"
+                    android:gravity="center_horizontal"
+                    android:text="Cộng Đồng"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
         </LinearLayout>
+    </ScrollView>
 
-    </LinearLayout>
-
-
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

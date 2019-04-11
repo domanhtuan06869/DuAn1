@@ -16,9 +16,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Aboutme"></activity>
+        <activity android:name=".Aboutme"
+            android:parentActivityName=".MainActivity"
+            android:label="Về Chúng Tôi"
+            ></activity>
         <activity
-            android:name=".Sick_activity"
+            android:name=".drugandhopistal.Sick_activity"
             android:label="Sơ cứu"
             android:parentActivityName=".MainActivity" />
 

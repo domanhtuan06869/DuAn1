@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".Sick_activity">
+    tools:context=".drugandhopistal.Sick_activity">
 
     <ScrollView
         android:fillViewport="true"

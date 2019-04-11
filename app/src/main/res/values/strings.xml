@@ -52,6 +52,8 @@
     <string name="gay"><![CDATA[< 18.5]]></string>
     <string name="dangnhapcd">Đăng nhập cộng đồng</string>
     <string name="dangkicd">Đăng kí</string>
+    <string name="about">Ứng dụng giúp mọi người bảo vệ sức khỏe trong dự án 1 của trường cao đẳng thực hành FPT Polytechnic</string>
+    <string name="aboutme">Ứng dụng được viết bởi Đỗ Mạnh Tuân và Nguyễn Đức Minh. Email: domanh.tuanpt@gmail.com</string>
     <string-array name="no_of_count">
         <item>1</item>
         <item>2</item>

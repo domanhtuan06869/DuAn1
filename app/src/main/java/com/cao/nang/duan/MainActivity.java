@@ -102,11 +102,16 @@ ConnectDB connectDB;
         } else if (id == R.id.khoiluongct) {
             classintent(Tinhbeogay_activity.class);
 
-        } else if (id == R.id.news) {
+        }else if(id==R.id.baouongthuoc){
+          classintent(AlarmDrug_activity.class);
+        }
+
+        else if (id == R.id.news) {
             classintent(News.class);
 
 
         } else if (id == R.id.aboutme) {
+            classintent(Aboutme.class);
 
         } else if (id == R.id.exits) {
             System.exit(0);
