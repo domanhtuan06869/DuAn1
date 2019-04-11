@@ -61,7 +61,7 @@ public class StepCounter_activity extends Base {
         tvSobuoc = (TextView) findViewById(R.id.tvSobuoc);
         fit();
 
-   readHistoryData();
+   //readHistoryData();
 
 
 
