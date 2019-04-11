@@ -130,8 +130,10 @@ public class DangBaiActivity extends AppCompatActivity {
            Toast.makeText(this, "Nhập nội dung cho tiêu đề và nội dung", Toast.LENGTH_SHORT).show();
 
        }
+       else if(title1.equals(".")){
+           Toast.makeText(this, "Tiêu đề không được có kí tự đặc biệt", Toast.LENGTH_SHORT).show();
 
-
+       }
         else
       {
 
@@ -247,6 +249,8 @@ public void  postnotimage(){
     if (title1.equals("")||content1.equals("")){
         Toast.makeText(DangBaiActivity.this, "Nhập nội dung cho tiêu đề và nội dung", Toast.LENGTH_SHORT).show();
 
+    }else if(title1.equals(".")) {
+        Toast.makeText(this, "Tiêu đề không được có kí tự đặc biệt", Toast.LENGTH_SHORT).show();
     }else{
         progressBar.setVisibility(View.VISIBLE);
 

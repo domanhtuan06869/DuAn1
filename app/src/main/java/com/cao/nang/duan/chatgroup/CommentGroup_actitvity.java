@@ -147,4 +147,8 @@ public class CommentGroup_actitvity extends AppCompatActivity {
                 edtcmt.setText("");
 
     }
+
+    public void back(View view) {
+        finish();
+    }
 }
