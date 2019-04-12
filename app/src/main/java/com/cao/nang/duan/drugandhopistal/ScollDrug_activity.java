@@ -16,6 +16,14 @@ public class ScollDrug_activity extends AppCompatActivity {
     private TextView tvCachDung;
     private TextView tvTacdungPhu;
     private TextView tvChuY;
+    private  final static String namedrug_="Name_Drug";
+    private  final static  String gia_="Price";
+    private  final static  String thanhphan_="Ingredient";
+    private  final static  String chidinh_="Assign";
+    private  final static  String chongchidinh_="Contraindicated";
+    private  final static  String cachdung_="User";
+    private  final static  String tacdungphu_="Effect";
+    private  final static  String chuy_="Attention";
 
 
     @Override
@@ -46,14 +54,14 @@ public class ScollDrug_activity extends AppCompatActivity {
     public void getIntentDrug(){
         Intent intent=getIntent();
         Bundle b= intent.getExtras();
-        String namedrug=b.getString("Name_Drug");
-        String gia=b.getString("Price");
-        String thanhphan=b.getString("Ingredient");
-        String chidinh=b.getString("Assign");
-        String chongchidinh=b.getString("Contraindicated");
-        String cachdung=b.getString("User");
-        String tacdungphu=b.getString("Effect");
-        String chuy=b.getString("Attention");
+        String namedrug=b.getString(namedrug_);
+        String gia=b.getString(gia_);
+        String thanhphan=b.getString(thanhphan_);
+        String chidinh=b.getString(chidinh_);
+        String chongchidinh=b.getString(chongchidinh_);
+        String cachdung=b.getString(cachdung_);
+        String tacdungphu=b.getString(tacdungphu_);
+        String chuy=b.getString(chuy_);
         tvNameDrug.setText(namedrug);
         tvGiathuoc.setText(gia);
         tvThanhphan.setText(thanhphan);

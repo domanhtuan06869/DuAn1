@@ -42,7 +42,6 @@ import static java.text.DateFormat.getTimeInstance;
 public class StepCounter_activity extends Base {
 
     public static final String TAG = "BasicHistoryApi";
-    // Identifier to identify the sign in activity.
     private static final int REQUEST_OAUTH_REQUEST_CODE = 1;
     private static final int REQUEST_OAUTH_REQUEST_CODEA = 0x1001;
     private TextView tvSobuoc;
@@ -106,10 +105,8 @@ public class StepCounter_activity extends Base {
      * thành công thì sẽ in ra dữ liệu
      */
     private Task<DataReadResponse> readHistoryData() {
-        // Begin by creating the query.
         DataReadRequest readRequest = queryFitnessData();
-
-        // Invoke the History API to fetch the data with the query
+        //đọc dữ liệu
         return Fitness.getHistoryClient(this, GoogleSignIn.getLastSignedInAccount(this))
                 .readData(readRequest)
                 .addOnSuccessListener(
@@ -160,15 +157,14 @@ public class StepCounter_activity extends Base {
                 dataSet.createDataPoint().setTimeInterval(startTime, endTime, TimeUnit.MILLISECONDS);
         dataPoint.getValue(Field.FIELD_STEPS).setInt(stepCountDelta);
         dataSet.add(dataPoint);
-        // [END build_insert_data_request]
+
 
         return dataSet;
     }
 
     /** trả về một {@link DataReadRequest} cho tất cả bước đếm trong ngày. */
     public  DataReadRequest queryFitnessData() {
-        // [START build_read_data_request]
-        // Setting a start and end date using a range of 1 week before this moment.
+
         Calendar cal = Calendar.getInstance();
         Date now = new Date();
         cal.setTime(now);
@@ -301,8 +297,8 @@ public class StepCounter_activity extends Base {
         }
 
     public void subscribe() {
-        // To create a subscription, invoke the Recording API. As soon as the subscription is
-        // active, fitness data will start recording.
+
+        //đọc bước đi theo ngày
         Fitness.getRecordingClient(this, GoogleSignIn.getLastSignedInAccount(this))
                 .subscribe(DataType.TYPE_STEP_COUNT_CUMULATIVE)
                 .addOnCompleteListener(

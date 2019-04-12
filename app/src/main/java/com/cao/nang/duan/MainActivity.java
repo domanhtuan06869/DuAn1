@@ -1,10 +1,13 @@
 package com.cao.nang.duan;
 
 import android.Manifest;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -15,6 +18,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.cao.nang.duan.alram.AlarmDrug_activity;
 import com.cao.nang.duan.base.Base;
@@ -119,7 +123,7 @@ ConnectDB connectDB;
             classintent(Aboutme.class);
 
         } else if (id == R.id.exits) {
-            System.exit(0);
+         showAlertDialog();
 
         }
 
@@ -179,9 +183,7 @@ ConnectDB connectDB;
         listSickDAO.insertSick(this);// insert bang benh
     }
 
-    public void baothuc(View view) {
-        classintent(AlarmDrug_activity.class);
-    }
+
 
     private void checkPermission() {
         Log.d("checkPermission","run");
@@ -233,6 +235,26 @@ ConnectDB connectDB;
                 }
             }
         }
+    }
+    public void showAlertDialog(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Bạn có muốn thoát không?");
+        builder.setCancelable(false);
+        builder.setPositiveButton("Không", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(MainActivity.this, "Không thoát được", Toast.LENGTH_SHORT).show();
+            }
+        });
+        builder.setNegativeButton("Thoát", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                System.exit(0);
+            }
+        });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+
     }
 }
 

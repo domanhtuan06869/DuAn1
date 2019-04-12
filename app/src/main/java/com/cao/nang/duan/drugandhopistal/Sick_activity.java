@@ -10,6 +10,8 @@ import com.cao.nang.duan.R;
 public class Sick_activity extends AppCompatActivity {
     private TextView tvNameSick;
     private TextView tvSocuu;
+    private static  final String name_="name";
+    private static  final String cach_="cachchua";
 
 
     @Override
@@ -23,8 +25,8 @@ public class Sick_activity extends AppCompatActivity {
         tvSocuu = (TextView) findViewById(R.id.tvSocuu);
         Intent intent=getIntent();
         Bundle bundle=intent.getExtras();
-        String name=bundle.getString("name");
-        String cach=bundle.getString("cachchua");
+        String name=bundle.getString(name_);
+        String cach=bundle.getString(cach_);
         tvNameSick.setText(name);
         tvSocuu.setText(cach);
 

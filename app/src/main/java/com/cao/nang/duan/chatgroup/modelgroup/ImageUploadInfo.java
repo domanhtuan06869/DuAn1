@@ -1,4 +1,4 @@
-package com.cao.nang.duan.chatgroup;
+package com.cao.nang.duan.chatgroup.modelgroup;
 
 public class ImageUploadInfo {
     private String imageURL;

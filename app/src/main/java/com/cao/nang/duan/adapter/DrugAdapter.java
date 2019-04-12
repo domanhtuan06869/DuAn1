@@ -18,7 +18,14 @@ import java.util.List;
 public class DrugAdapter extends RecyclerView.Adapter<DrugAdapter.MyViewHolder> {
     Context context;
     List<Drug> listdr;
-
+    private  final static String namedrug_="Name_Drug";
+    private  final static  String gia_="Price";
+    private  final static  String thanhphan_="Ingredient";
+    private  final static  String chidinh_="Assign";
+    private  final static  String chongchidinh_="Contraindicated";
+    private  final static  String cachdung_="User";
+    private  final static  String tacdungphu_="Effect";
+    private  final static  String chuy_="Attention";
 
     public  DrugAdapter(Context c, List<Drug> list) {
         context = c;
@@ -56,14 +63,14 @@ public class DrugAdapter extends RecyclerView.Adapter<DrugAdapter.MyViewHolder> 
     private void openDetailActivity(String...details)
     {
        Intent i=new Intent(context, ScollDrug_activity.class);
-     i.putExtra("Name_Drug",details[0]);
-     i.putExtra("Price",details[1]);
-     i.putExtra("Ingredient",details[2]);
-     i.putExtra("Assign",details[3]);
-     i.putExtra("Contraindicated",details[4]);
-     i.putExtra("User",details[5]);
-     i.putExtra("Effect",details[6]);
-     i.putExtra("Attention",details[7]);
+     i.putExtra(namedrug_,details[0]);
+     i.putExtra(gia_,details[1]);
+     i.putExtra(thanhphan_,details[2]);
+     i.putExtra( chidinh_,details[3]);
+     i.putExtra(chongchidinh_,details[4]);
+     i.putExtra(cachdung_,details[5]);
+     i.putExtra(tacdungphu_,details[6]);
+     i.putExtra( chuy_,details[7]);
 
     context.startActivity(i);
     }

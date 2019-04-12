@@ -21,6 +21,7 @@ public class ListDrug_activity extends Base {
     List<Drug>drugList=new ArrayList<>();
     DrugAdapter drugAdapter;
     String category;
+    static  final String Category_="Category";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +33,7 @@ public class ListDrug_activity extends Base {
         try {
 
 
-          category = b.getString("Category");
+          category = b.getString(Category_);
         }catch (Exception category){}
         rcviewDrug = (RecyclerView) findViewById(R.id.rcviewDrug);
        drugList= listDrugDAO.getAllDurgWithCategory(category);

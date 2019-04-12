@@ -1,4 +1,4 @@
-package com.cao.nang.duan.chatgroup;
+package com.cao.nang.duan.chatgroup.adaptergroup;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.cao.nang.duan.R;
+import com.cao.nang.duan.chatgroup.BangTinActyvity;
+import com.cao.nang.duan.chatgroup.CommentGroup_actitvity;
+import com.cao.nang.duan.chatgroup.modelgroup.ImageUploadInfo;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

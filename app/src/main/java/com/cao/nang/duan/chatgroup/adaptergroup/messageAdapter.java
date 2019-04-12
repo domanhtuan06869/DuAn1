@@ -1,4 +1,4 @@
-package com.cao.nang.duan.chatgroup;
+package com.cao.nang.duan.chatgroup.adaptergroup;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.cao.nang.duan.R;
+import com.cao.nang.duan.chatgroup.modelgroup.Email;
+import com.cao.nang.duan.chatgroup.modelgroup.Tomessage;
 
 import java.util.List;
 

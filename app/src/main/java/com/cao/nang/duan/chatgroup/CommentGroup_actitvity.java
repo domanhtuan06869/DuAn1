@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.cao.nang.duan.R;
+import com.cao.nang.duan.chatgroup.adaptergroup.messageAdapter;
+import com.cao.nang.duan.chatgroup.modelgroup.Tomessage;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -40,6 +42,12 @@ public class CommentGroup_actitvity extends AppCompatActivity {
     private TextView tvEmailcmt;
     private TextView datecomment;
     private String email;
+    private static  final String title_="title";
+    private static  final String urlimg_="img";
+    private static  final String contents_="content";
+    private static  final String date_="Date";
+    private static  final String email_="Email";
+    private static  final String emaill_="Emaill";
 
 
     @Override
@@ -57,12 +65,12 @@ public class CommentGroup_actitvity extends AppCompatActivity {
 
         Intent in = getIntent();
         Bundle b = in.getExtras();
-      String  title = b.getString("title");
-        String urlimg = b.getString("img");
-        String contents=b.getString("content");
-        String date =b.getString("Date");
-         email =b.getString("Email");
-         String emaill=b.getString("Emaill");
+      String  title = b.getString(title_);
+        String urlimg = b.getString(urlimg_);
+        String contents=b.getString(contents_);
+        String date =b.getString(date_);
+         email =b.getString(email_);
+         String emaill=b.getString(emaill_);
         Picasso.get().load(urlimg).into(imgView);
         tvtitlecmt.setText(title);
         tvcontent.setText(contents);

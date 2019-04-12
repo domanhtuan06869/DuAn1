@@ -20,6 +20,7 @@ public class ListCategoryDrug_activity extends Base {
     ListCategoryDAO listCategoryDAO=new ListCategoryDAO(this);
     CategoryDrugAdapter categoryDrugAdapter;
     private RecyclerView rcCategory;
+    static  final String drunglist_ ="List_Category";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +30,7 @@ public class ListCategoryDrug_activity extends Base {
         setContentView(R.layout.activity_list_category_drug);
         Intent in =getIntent();
         Bundle b=in.getExtras();
-        String drunglist=b.getString("List_Category");
+        String drunglist=b.getString(drunglist_);
         rcCategory = (RecyclerView) findViewById(R.id.rcCategory);
 
        // listCategoryDAO.insertAllListCategoryDurg(this);

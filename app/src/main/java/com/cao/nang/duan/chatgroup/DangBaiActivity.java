@@ -14,6 +14,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cao.nang.duan.R;
+import com.cao.nang.duan.chatgroup.adaptergroup.ImgAdapter;
+import com.cao.nang.duan.chatgroup.modelgroup.ImageUploadInfo;
+import com.cao.nang.duan.chatgroup.modelgroup.Message;
 import com.github.ybq.android.spinkit.style.FadingCircle;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;

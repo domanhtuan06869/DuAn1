@@ -10,6 +10,8 @@ import android.view.View;
 
 import com.cao.nang.duan.R;
 import com.cao.nang.duan.base.Base;
+import com.cao.nang.duan.chatgroup.adaptergroup.ImgAdapter;
+import com.cao.nang.duan.chatgroup.modelgroup.ImageUploadInfo;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -27,7 +29,7 @@ public class BangTinActyvity extends Base {
 
     ImgAdapter adapter;
     private RecyclerView rclist;
-
+    private static  final String email_="Email";
     public  String email;
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -39,7 +41,7 @@ public class BangTinActyvity extends Base {
         rclist = (RecyclerView) findViewById(R.id.rcStatus);
         Intent intent=getIntent();
         Bundle b=intent.getExtras();
-        email=b.getString("Email");
+        email=b.getString(email_);
         mShimmerViewContainer = findViewById(R.id.shimmer_view_container);
         adapter=new ImgAdapter(BangTinActyvity.this,imageUploadInfos,email);
         rclist.setHasFixedSize(true);
