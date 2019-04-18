@@ -26,7 +26,7 @@
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:text="Tiện ích"
         android:textStyle="bold"
-        android:textSize="40dp"
+        android:textSize="35dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
 

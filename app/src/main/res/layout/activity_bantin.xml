@@ -44,7 +44,6 @@
 
             <include layout="@layout/recipe_placeholder_item" />
 
-            <include layout="@layout/recipe_placeholder_item" />
 
         </LinearLayout>
 

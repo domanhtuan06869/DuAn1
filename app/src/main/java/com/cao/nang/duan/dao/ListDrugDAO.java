@@ -30,7 +30,7 @@ public class ListDrugDAO {
         sqLiteDatabase.beginTransaction();
         String line;
         while(scanner.hasNextLine() && ((line = scanner.nextLine()) != null)) {
-            String[] values = line.split(",");
+            String[] values = line.split("/");
             if(values.length != 9)
                 continue;
 
